@@ -4977,3 +4977,7 @@ org.eclipse.core.runtime.CoreException: Variable references non-existent resourc
 2015-06-03 22:00:29,395 [Worker-215] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
 2015-06-03 22:00:39,772 [Worker-217] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
 2015-06-03 22:00:39,772 [Worker-217] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B exec:java
+2015-06-03 23:03:40,743 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-03 23:03:40,744 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-03 23:03:40,745 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-03 23:03:40,745 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
