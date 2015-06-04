@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.application;
+
+public class KeyWordIndex {
+
+	public KeyWordIndex() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

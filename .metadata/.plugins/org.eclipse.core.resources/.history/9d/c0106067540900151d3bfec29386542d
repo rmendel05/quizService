@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.application.test;
+
+public class QuestionCacheTest {
+
+	public QuestionCacheTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

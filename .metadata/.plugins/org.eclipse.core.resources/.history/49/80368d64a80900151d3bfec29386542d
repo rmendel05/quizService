@@ -1,0 +1,54 @@
+package com.rmendel.quizManager.service;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.rmendel.framework.ILoggableResponse;
+import com.rmendel.framework.ResponseLogEntry;
+import com.rmendel.quizManager.api.AnswerDto;
+import com.rmendel.quizManager.api.QuerySpecDto;
+import com.rmendel.quizManager.api.QuestionDto;
+import com.rmendel.quizManager.api.QuestionResponseDto;
+import com.rmendel.quizManager.application.Question;
+
+@Path("/questionService")
+public final class QuestionService {
+	 @GET
+	 @Path("/getQuestion/{id}")
+	 @Produces(MediaType.APPLICATION_JSON)
+	 public QuestionResponseDto getQuestion(@PathParam("id") String id) {
+		 try(ResponseLogEntry<QuestionResponseDto> logEntry = 
+				 new ResponseLogEntry<QuestionResponseDto>("getQuestion")) {
+			 try {
+				 QuestionDto result = Question.getObjectDtoByID(id);
+				 logEntry.setResponse(new QuestionResponseDto(true, result));
+				 return logEntry.getResponse();
+				 
+			 } catch(Exception e) {
+				 log.setMessage("test");
+				 return new QuestionResponseDto(e);
+			 }
+		 }
+	 }
+
+	 // TODO Document filter types for QuestionDto queries: keyWords
+	 // TODO Document sort elements for QuestionDto queries: id, questionText, wordCount, distractorCount
+	 @POST
+	 @Path("/getQuestions")
+	 @Produces(MediaType.APPLICATION_JSON)
+	 public ILoggableResponse getQuestions(QuerySpecDto query) {
+		 try {
+			 QuestionDto[] rawReturn = Question.getObjectDtos(query);
+			 ILoggableResponse toReturn = new QuestionResponseDto(true, rawReturn);
+			 return toReturn;
+		 } catch(Exception e) {
+			 return new QuestionResponseDto(e);
+		 }
+	 }
+
+
+}

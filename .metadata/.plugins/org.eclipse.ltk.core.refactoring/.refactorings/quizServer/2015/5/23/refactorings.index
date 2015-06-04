@@ -1,0 +1,11 @@
+1433079508357	Rename package 'com.rmendel.quizService'
+1433079571325	Rename package 'com.rmendel.quizService.test'
+1433080178931	Delete element
+1433097177162	Rename field 'responses'
+1433097207029	Rename method 'getResponses'
+1433097230049	Rename method 'setResponses'
+1433098516664	Delete element
+1433098521334	Delete element
+1433102312607	Rename type 'QuestionQuery'
+1433102329547	Rename type 'QuerySort'
+1433102350371	Rename type 'QueryFilter'

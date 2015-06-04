@@ -1,0 +1,57 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "questionResponse")
+public final class QuestionResponseDto {
+
+	public QuestionResponseDto(
+			boolean isSuccess,
+			QuestionDto result) {
+		this.results = new QuestionDto[] {result};
+		this.isSuccess = isSuccess;
+	}
+
+	public QuestionResponseDto(
+			boolean isSuccess,
+			QuestionDto[] results) {
+		this.results = results;
+		this.isSuccess = isSuccess;
+	}
+
+	public QuestionResponseDto(Exception e) {
+		errorMessage = e.getMessage();
+	}
+
+	public boolean isSuccess() {
+		return isSuccess;
+	}
+
+	public void setSuccess(boolean isSuccess) {
+		this.isSuccess = isSuccess;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+
+	@XmlElementWrapper(name = "results")
+	@XmlElement(name = "result")
+	public QuestionDto[] getResults() {
+		return results;
+	}
+
+	public void setResults(QuestionDto[] results) {
+		this.results = results;
+	}
+
+	private boolean isSuccess = false;
+	private String errorMessage = null;
+	private QuestionDto[] results = null;
+}

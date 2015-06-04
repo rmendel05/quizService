@@ -1,0 +1,26 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "pageSpec")
+public class PageSpec {
+
+	public PageSpec() {
+	}
+
+	public Integer getRowsPerPage() {
+		return rowsPerPage;
+	}
+	public void setRowsPerPage(Integer rowsPerPage) {
+		this.rowsPerPage = rowsPerPage;
+	}
+	public Integer getPageOffset() {
+		return pageOffset;
+	}
+	public void setPageOffset(Integer pageOffset) {
+		this.pageOffset = pageOffset;
+	}
+
+	private Integer rowsPerPage = null;
+	private Integer pageOffset = null;
+}

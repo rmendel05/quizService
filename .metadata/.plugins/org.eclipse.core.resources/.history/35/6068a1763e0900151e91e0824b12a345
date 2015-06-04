@@ -1,0 +1,37 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "filterSpec")
+public class FilterSpec {
+
+	public FilterSpec() {
+	}
+
+	public String getFilterType() {
+		return filterType;
+	}
+	public void setFilterType(String filterType) {
+		this.filterType = filterType;
+	}
+
+	public String getMinValue() {
+		return minValue;
+	}
+
+	public void setMinValue(String minValue) {
+		this.minValue = minValue;
+	}
+
+	public String getMaxValue() {
+		return maxValue;
+	}
+
+	public void setMaxValue(String maxValue) {
+		this.maxValue = maxValue;
+	}
+
+	private String filterType = null;
+	private String minValue = null;
+	private String maxValue = null;
+}

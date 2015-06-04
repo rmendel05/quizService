@@ -1,0 +1,15 @@
+package com.rmendel.quizModel;
+
+import com.rmendel.rmObjectModel.BaseExtractObject;
+
+public final class QuizAnswer extends BaseExtractObject {
+	public String getResponseText() {
+		return responseText;
+	}
+	public void setResponseText(String value) {
+		responseText = value;  
+	}
+
+	private String responseText;
+	private String quizQuestionID = null;
+}

@@ -1,0 +1,32 @@
+package com.rmendel.rmObjectModel;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "baseOperationResponse")
+public abstract class BaseOperationResponse {
+	public BaseOperationResponse() {
+	}
+	
+	public BaseOperationResponse(Exception e) {
+		errorMessage = e.getMessage();
+	}
+	
+	public boolean isSuccess() {
+		return isSuccess;
+	}
+
+	public void setSuccess(boolean isSuccess) {
+		this.isSuccess = isSuccess;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+	
+	private boolean isSuccess = false;
+	private String errorMessage = null;
+}

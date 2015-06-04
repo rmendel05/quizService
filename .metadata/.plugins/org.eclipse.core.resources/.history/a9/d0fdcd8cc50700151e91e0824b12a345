@@ -1,0 +1,9 @@
+package com.rmendel.rmObjectModel;
+
+public abstract class BaseFilterSpec {
+
+	public BaseFilterSpec() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

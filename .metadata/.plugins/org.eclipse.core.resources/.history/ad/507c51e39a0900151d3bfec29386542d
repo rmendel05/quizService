@@ -1,0 +1,15 @@
+package com.rmendel.framework;
+
+public interface ILoggableResponse {
+
+	String getId();
+
+	boolean isSuccess();
+
+	String getErrorMessage();
+	
+	int getRowCount();
+	
+	String getResponseId();
+
+}

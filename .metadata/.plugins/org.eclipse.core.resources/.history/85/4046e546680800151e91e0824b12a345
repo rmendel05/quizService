@@ -1,0 +1,25 @@
+package com.rmendel.quizInterface;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.rmendel.rmObjectModel.BaseOperationResponse;
+
+@XmlRootElement(name = "quizQuestionResponse")
+public final class QuizQuestionResponse {
+
+	public QuizQuestionResponse(
+			boolean isSuccess,
+			QuizQuestion result) {
+		super();
+		this.result = result;
+		setSuccess(isSuccess);
+	}
+
+	public QuizQuestionResponse(Exception e) {
+		super(e);
+	}
+
+	private boolean isSuccess = false;
+	private String errorMessage = null;
+	private QuizQuestion[] results = null;
+}

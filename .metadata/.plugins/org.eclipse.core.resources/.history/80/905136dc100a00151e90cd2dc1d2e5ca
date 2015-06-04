@@ -1,0 +1,38 @@
+package com.rmendel.framework;
+
+public class TaskLogEntry extends BaseLogEntry {
+
+	public TaskLogEntry(String context) {
+		super(context);
+	}
+
+	@Override
+	protected String getAdditionalMessage() {
+		String message = "";
+		if(isSuccess()) {
+			message += successMessage;
+		} else {
+			message += response.getErrorMessage();
+		}
+		return message;
+	}
+
+	public String getSuccessMessage() {
+		return successMessage;
+	}
+
+	public void setSuccessMessage(String successMessage) {
+		this.successMessage = successMessage;
+	}
+
+	public Exception getException() {
+		return exception;
+	}
+
+	public void setException(Exception exception) {
+		this.exception = exception;
+	}
+
+	private String successMessage = null;
+	private Exception exception = null;
+}

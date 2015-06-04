@@ -1,0 +1,33 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "querySpec")
+public class QuerySpec {
+
+	public QuerySpec() {
+	}
+
+	public FilterSpec getFilter() {
+		return filter;
+	}
+	public void setFilter(FilterSpec filter) {
+		this.filter = filter;
+	}
+	public SortSpec getSortElement() {
+		return sortElement;
+	}
+	public void setSortElement(SortSpec sortElement) {
+		this.sortElement = sortElement;
+	}
+	public PageSpec getPage() {
+		return page;
+	}
+	public void setPage(PageSpec page) {
+		this.page = page;
+	}
+
+	private FilterSpec filter = null;
+	private SortSpec sortElement = null;
+	private PageSpec page = null;
+}

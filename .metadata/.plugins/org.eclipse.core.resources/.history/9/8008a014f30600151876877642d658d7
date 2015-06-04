@@ -1,0 +1,7 @@
+package com.rmendel.quizModel;
+
+public abstract class BaseOperationResponse {
+	private boolean isSuccess = false;
+	private String errorMessage = null;
+
+}

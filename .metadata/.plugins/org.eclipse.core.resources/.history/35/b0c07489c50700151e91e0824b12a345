@@ -1,0 +1,9 @@
+package com.rmendel.rmObjectModel;
+
+public abstract class BaseQuerySpec {
+
+	public BaseQuerySpec() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

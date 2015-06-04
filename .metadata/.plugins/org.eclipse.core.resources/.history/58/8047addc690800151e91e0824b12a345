@@ -1,0 +1,21 @@
+package com.rmendel.rmObjectModel;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "baseExtractObject")
+public abstract class BaseExtractObject implements IApiObject {
+	public BaseExtractObject() {
+	}
+	
+	public abstract String getObjectNotion();
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	private String id = null;
+}

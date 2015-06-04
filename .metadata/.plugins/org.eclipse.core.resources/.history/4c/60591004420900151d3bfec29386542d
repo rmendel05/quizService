@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.application;
+
+public class QuestionData {
+
+	public QuestionData() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.rmendel.framework.test;
+
+public class ResponseLogEntryTest {
+
+	public ResponseLogEntryTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

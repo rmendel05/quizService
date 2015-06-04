@@ -1,0 +1,5 @@
+package com.rmendel.rmObjectModel;
+
+public final class VoidResponse extends BaseOperationResponse {
+
+}

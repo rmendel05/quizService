@@ -1,0 +1,26 @@
+package com.rmendel.quizManager.application;
+
+public class QuestionCache {
+
+	public QuestionCache() {
+	}
+	
+	private static QuestionCache instance = null;
+	public static QuestionCache getInstance() throws Exception {
+		if(instance == null) {
+			initializeSingleton();
+		}
+		
+		return instance;
+	}
+	
+	public static synchronized void initializeSingleton() throws Exception {
+		instance = new QuestionCache();
+	}
+	
+	private void loadQuestionData() {
+		
+	}
+	
+	private QuestionTable questionTable = new QuestionTable();
+}

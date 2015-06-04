@@ -1,0 +1,95 @@
+package com.rmendel.quizManager.application;
+
+import java.util.ArrayList;
+
+import com.rmendel.framework.ExpressionUtilities;
+import com.rmendel.quizManager.api.AnswerDto;
+import com.rmendel.quizManager.api.QuerySpecDto;
+import com.rmendel.quizManager.api.QuestionDto;
+
+// TODO Use generics to convert between server objects and DTOs
+public class Question {
+
+	public Question() {
+	}
+	
+	public QuestionDto getObjectDtoByID(String id) throws Exception {
+		QuestionData question = getObjectByID(id);
+		return objectToDto(question);
+	}
+	
+	public QuestionDto[] getObjectDtos(QuerySpecDto query) throws Exception {
+		ArrayList<QuestionData> questions = getObjects(query);
+		
+	}
+	
+	public QuestionDto insertObjectDto(QuestionDto toCreate) {
+		
+	}
+	
+	public QuestionDto updateObjectDto(QuestionDto toUpdate) {
+		
+	}
+	
+	public QuestionDto objectToDto(QuestionData toConvert) {
+		QuestionDto toReturn = new QuestionDto();
+		toReturn.setId(toConvert.getId());
+		toReturn.setQuestionText(toConvert.getQuestionText());
+		toReturn.setAnswer(Answer.objectToDto(toConvert.getAnswer()));
+		
+		ArrayList<AnswerDto> distractorDtos = new ArrayList<AnswerDto>();
+		for(AnswerData distractorToConvert:toConvert.getDistractors())
+			distractorDtos.add(Answer.objectToDto(distractorToConvert));
+		AnswerDto[] distractorsToReturn = null;
+		distractorsToReturn = distractorDtos.toArray(distractorsToReturn);
+		toReturn.setDistractors(distractorsToReturn);
+		
+		toReturn.setWordCount(toConvert.getWordCount());
+		return toReturn;
+	}
+	
+	public QuestionData getObjectByID(String id) throws Exception {
+		QuestionTable table = QuestionCache.getInstanceQuestionTable();
+		return table.getRowByID(id);
+	}
+
+	public ArrayList<QuestionData> getObjects(QuerySpecDto query) throws Exception {
+		QuestionTable table = QuestionCache.getInstanceQuestionTable();
+		return table.getRows(query);
+	}
+	
+	public QuestionData insertObject(QuestionData toCreate) throws Exception {
+		updateDerivedProperties(toCreate);
+		QuestionTable table = QuestionCache.getInstanceQuestionTable();
+		table.putRow(toCreate);
+		return toCreate;
+	}
+	
+	public QuestionData updateObject(QuestionData toUpdate) {
+		updateDerivedProperties(toUpdate);
+		return toUpdate;
+	}
+	
+	private void updateDerivedProperties(QuestionData question) {
+		updateWordCount(question);
+	}
+	
+	private void updateWordCount(QuestionData question) {
+		int wordCount = 0;
+		
+		if(!ExpressionUtilities.isTrivial(question.getQuestionText()))
+			wordCount += question.getQuestionText().split(" ").length;
+		
+		AnswerData AnswerData = question.getAnswer();
+		if(AnswerData != null && !ExpressionUtilities.isTrivial(AnswerData.getResponseText()))
+			wordCount += AnswerData.getResponseText().split(" ").length;
+
+		for(AnswerData distractor:question.getDistractors())
+			if(!ExpressionUtilities.isTrivial(distractor.getResponseText()))
+				wordCount += distractor.getResponseText().split(" ").length;
+		
+		question.setWordCount(wordCount);
+	}
+	
+
+}

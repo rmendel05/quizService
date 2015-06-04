@@ -1,0 +1,352 @@
+package com.rmendel.quizManager.application;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.function.Function;
+
+import com.rmendel.framework.ExpressionUtilities;
+import com.rmendel.framework.RMLog;
+import com.rmendel.quizManager.api.AnswerDto;
+import com.rmendel.quizManager.api.FilterSpec;
+import com.rmendel.quizManager.api.PageSpec;
+import com.rmendel.quizManager.api.QuerySpec;
+import com.rmendel.quizManager.api.Question;
+import com.rmendel.quizManager.api.SortSpec;
+
+// TODO Create business classes and backing data classes for question and answer notions, separate from api/dto classes
+// TODO Create indexes for supported search keys and key words
+// TODO Synchronize access to table data
+// TODO Move this to a real database
+public final class QuestionTable {
+	
+	public static final String FILTER_TYPE_WORD_COUNT = "wordCount";
+	public static final String FILTER_TYPE_DISTRACTOR_COUNT = "distractorCount"; 
+	
+	public static final String SORT_BY_WORD_COUNT = "wordCount";
+
+	public QuestionTable() {
+	}
+	
+	public Question newQuestion() {
+		Question toReturn = new Question();
+		toReturn.setId(
+				Integer.toString(getNextQuestionIDSequence()));
+		return toReturn;
+	}
+	
+	public AnswerDto newAnswer() {
+		AnswerDto toReturn = new AnswerDto();
+		toReturn.setId(
+				Integer.toString(getNextAnswerIDSequence()));
+		return toReturn;
+	}
+	
+	public Question getRowByID(String lookupID) {
+		if(ExpressionUtilities.isTrivial(lookupID)) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a non-trivial value for parameter lookupID.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		if(rowsByID.containsKey(lookupID)) {
+			return rowsByID.get(lookupID);
+		} else {
+			IllegalStateException e = new IllegalStateException(
+					"Could not find a row with id [" + lookupID + "].");
+			RMLog.error(e);
+			throw e;
+		}
+	}
+	
+	public ArrayList<Question> getRows(QuerySpec querySpec) throws Exception {
+		if(querySpec == null) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a non-trivial value for parameter query.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		ArrayList<Question> toReturn = new ArrayList<Question>(rowsByID.values());
+		
+		toReturn = applyFilter(toReturn, querySpec.getFilterSpec());
+		sort(toReturn, querySpec.getSortSpec());
+		toReturn = applyPage(toReturn, querySpec.getPageSpec());
+
+		return toReturn;
+	}
+	
+	private ArrayList<Question> applyFilter(
+			ArrayList<Question> questions,
+			FilterSpec filterSpec) {
+		if(filterSpec == null)
+			return questions;
+		
+		if(ExpressionUtilities.isTrivial(filterSpec.getFilterType())) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a non-trivial value for filterType.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		// TODO Add more ways to filter
+		String filterType = filterSpec.getFilterType();
+		switch(filterType) {
+			case FILTER_TYPE_WORD_COUNT:
+				return applyWordCountFilter(questions, filterSpec);
+
+			case FILTER_TYPE_DISTRACTOR_COUNT:
+				return applyDistractorCountFilter(questions, filterSpec);
+			
+			default:
+				IllegalArgumentException e = new IllegalArgumentException(
+						"Value [" + filterType + "] is not a valid filterType. Acceptable values include [" + 
+						FILTER_TYPE_WORD_COUNT + ", " + FILTER_TYPE_DISTRACTOR_COUNT + "].");
+				RMLog.error(e);
+				throw e;
+		}
+	}
+
+	private ArrayList<Question> applyWordCountFilter(
+			ArrayList<Question> questions, 
+			FilterSpec filterSpec) {
+		
+		return applyRangeFilter(
+				questions,
+				filterSpec,
+				(question)->question.getWordCount());
+	}
+
+	private ArrayList<Question> applyDistractorCountFilter(
+			ArrayList<Question> questions, 
+			FilterSpec filterSpec) {
+		
+		return applyRangeFilter(
+				questions,
+				filterSpec,
+				(question)->question.getDistractors().length);
+	}
+	
+	private ArrayList<Question> applyRangeFilter(
+			ArrayList<Question> questions, 
+			FilterSpec filterSpec,
+			Function<Question,Integer> valueRule) {
+		Integer minValue = parseIntegerFilter(filterSpec.getMinValue(), "minValue");
+		Integer maxValue = parseIntegerFilter(filterSpec.getMaxValue(), "maxValue");
+		
+		if(minValue == null && maxValue == null)
+			return questions;
+		
+		ArrayList<Question> toReturn = new ArrayList<Question>();
+		for(Question question:questions) {
+			if(minValue != null && question.getWordCount() < minValue)
+				continue;
+			if(maxValue != null && question.getWordCount() > maxValue)
+				continue;
+			
+			toReturn.add(question);
+		}
+		
+		return toReturn;
+	}
+	
+	private Integer parseIntegerFilter(
+			String filterValue,
+			String propertyName) {
+		Integer toReturn = null;
+		String rawMin = filterValue.trim();
+		if(!ExpressionUtilities.isTrivial(rawMin)) {
+			try {
+				toReturn = Integer.parseInt(rawMin);
+			} catch(NumberFormatException numberFormatException) {
+				IllegalArgumentException e = new IllegalArgumentException(
+						"Value [" + filterValue + "] is not a valid " + propertyName + ". Must specify an integer.");
+				RMLog.error(e);
+				throw e;
+			}
+		}
+		
+		return toReturn;
+	}
+
+	// TODO Add more ways to sort
+	private void sort(
+			ArrayList<Question> questions,
+			SortSpec sortSpec) {
+		if(sortSpec == null)
+			return;
+		
+		if(ExpressionUtilities.isTrivial(sortSpec.getSortByAttribute())) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a non-trivial value for sortByAttribute.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		String sortByAttribute = sortSpec.getSortByAttribute();
+		switch(sortByAttribute) {
+		
+			case SORT_BY_WORD_COUNT:
+				questions.sort(new Comparator<Question>() {
+					public int compare(Question first, Question second) {
+						if(first.getWordCount() == second.getWordCount())
+							return 0;
+						else if(first.getWordCount() < second.getWordCount())
+							return -1;
+						else
+							return 1;
+					}
+				});
+			
+			default:
+				IllegalArgumentException e = new IllegalArgumentException(
+						"Value [" + sortByAttribute + "] is not a valid sortByAttribute. Acceptable values include [" + 
+								SORT_BY_WORD_COUNT + "].");
+				RMLog.error(e);
+				throw e;
+		}
+	}
+	
+	// TODO Return an indication of whether the specified page is the last one containing data
+	private ArrayList<Question> applyPage(
+			ArrayList<Question> questions,
+			PageSpec pageSpec) throws Exception {
+		if(pageSpec == null)
+			return questions;
+		
+		if(pageSpec.getRowsPerPage() == null || pageSpec.getRowsPerPage() < 1) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify an integer value greater than zero for rowsPerPage.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		if(pageSpec.getPageOffset() == null || pageSpec.getPageOffset() < 0) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a non-negative integer value for pageOffset.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		int startOffset;
+		try {
+			startOffset = pageSpec.getPageOffset() * pageSpec.getRowsPerPage();
+		} catch(Exception e) {
+			Exception startOffsetException = new Exception(
+					"Unable to calculate row offset for pageOffset [" + pageSpec.getPageOffset() + "] and rowsPerPage [" + pageSpec.getRowsPerPage() + "].", 
+					e);
+			RMLog.error(startOffsetException);
+			throw startOffsetException;
+		}
+		
+		if(startOffset >= questions.size()) {
+			IndexOutOfBoundsException e = new IndexOutOfBoundsException(
+					"startOffset for pageSpec is beyond the range of rows in the result set.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		int endOffset;
+		try {
+			endOffset = Math.min(startOffset + pageSpec.getRowsPerPage() - 1, questions.size());		
+		} catch(Exception e) {
+			Exception startOffsetException = new Exception(
+					"Unable to calculate ending row offset for pageOffset [" + pageSpec.getPageOffset() + "] and rowsPerPage [" + pageSpec.getRowsPerPage() + "].", 
+					e);
+			RMLog.error(startOffsetException);
+			throw startOffsetException;
+		}
+		
+		return new ArrayList<Question>(questions.subList(startOffset, endOffset));
+	}
+
+	public void putRow(Question toAdd) {
+		if(toAdd == null) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a question to add.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		String id = toAdd.getId();
+		if(ExpressionUtilities.isTrivial(id)) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify an id for the question to add.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		if(!rowsByID.containsKey(id)) {
+			updateWordCount(toAdd);
+			rowsByID.put(id, toAdd);
+		} else {
+			IllegalStateException e = new IllegalStateException(
+					"Could not add question with id [" + id + "] because a question with that id already exists.");
+			RMLog.error(e);
+			throw e;
+		}
+	}
+	
+	public void updateRow(Question toUpdate) {
+		if(toUpdate == null) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify a question to update.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		String id = toUpdate.getId();
+		if(ExpressionUtilities.isTrivial(id)) {
+			IllegalArgumentException e = new IllegalArgumentException(
+					"Must specify an id for the question to update.");
+			RMLog.error(e);
+			throw e;
+		}
+		
+		if(rowsByID.containsKey(id)) {
+			// TODO Complete QuestionTable.updateRow()
+			updateWordCount(toUpdate);
+			rowsByID.put(id, toUpdate);
+		} else {
+			IllegalStateException e = new IllegalStateException(
+					"putRow() could not add row with id [" + id + "] because a row with that id already exists.");
+			RMLog.error(e);
+			throw e;
+		}
+	}
+	
+	public int getRowCount() {
+		return rowsByID.size();
+	}
+	
+	private int updateWordCount(Question question) {
+		int toReturn = 0;
+		
+		if(!ExpressionUtilities.isTrivial(question.getQuestionText()))
+			toReturn += question.getQuestionText().split(" ").length;
+		
+		AnswerDto answerDto = question.getAnswer();
+		if(answerDto != null && !ExpressionUtilities.isTrivial(answerDto.getResponseText()))
+			toReturn += answerDto.getResponseText().split(" ").length;
+
+		for(AnswerDto distractor:question.getDistractors())
+			if(!ExpressionUtilities.isTrivial(distractor.getResponseText()))
+				toReturn += distractor.getResponseText().split(" ").length;
+		
+		return toReturn;
+	}
+	
+	private int getNextQuestionIDSequence() {
+		return questionIDSequence++;
+	}
+
+	private int getNextAnswerIDSequence() {
+		return answerIDSequence++;
+	}
+	
+	private int questionIDSequence = 0;
+	private int answerIDSequence = 0;
+	private HashMap<String, Question> rowsByID =
+			new HashMap<String, Question>();
+}

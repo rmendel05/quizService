@@ -1,0 +1,74 @@
+package com.rmendel.quizManager.service.test;
+
+import java.util.UUID;
+
+import com.rmendel.quizManager.api.AnswerDto;
+import com.rmendel.quizManager.api.QuestionDto;
+import com.rmendel.quizManager.api.QuestionResponseDto;
+import com.rmendel.quizManager.service.QuestionService;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class QuestionServiceTest 
+    extends TestCase
+{
+    public QuestionServiceTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( QuestionServiceTest.class );
+    }
+
+    public void testCrud()
+    {
+    	QuestionService service = new QuestionService();
+    	QuestionDto q1 = getQuestion();
+    	QuestionDto q2 = getQuestion();
+    	QuestionDto q3 = getQuestion();
+    	
+    	QuestionDto q1Result = service.insert(q1);
+    	
+    	
+    	String questionID = "ABC";
+    	QuestionResponseDto response = service.getQuestion(questionID);
+    	assertTrue("Response was null.", response != null);
+    	assertTrue("Service method success was false.", response.isSuccess());
+    	assertTrue("Response.result was null.", response.getResults() != null);
+    	assertEquals("Incorrect number of results returned.", 1, response.getResults().length);
+    	assertTrue("Wrong object was returned.", response.getResults()[0].getId().equals(questionID));
+    }
+    
+    private QuestionDto getSingleResult(QuestionResponseDto response) {
+    	validateResponse(response);
+    	assertEquals("Wrong number of objects returned.", 1, response.getRowCount());
+    	return response.getResults()[0];
+    }
+    
+    private void validateResponse(QuestionResponseDto response) {
+    	assertTrue("Response was null.", response != null);
+    	assertTrue("Unsuccessful response: " + response.getErrorMessage(), response.isSuccess());
+    }
+    
+    private QuestionDto getQuestion() {
+    	QuestionDto toReturn = new QuestionDto();
+    	toReturn.setQuestionText(getUniqueID() + " more words?");
+    	toReturn.setAnswer(getAnswer());
+    	toReturn.setDistractors(new AnswerDto[] {getAnswer(),getAnswer(),getAnswer()});
+    	return toReturn;
+    }
+    
+    private AnswerDto getAnswer() {
+    	AnswerDto toReturn = new AnswerDto();
+    	toReturn.setResponseText(getUniqueID());
+    	return toReturn;
+    }
+    
+    private String getUniqueID() {
+    	return UUID.randomUUID().toString();
+    }
+}

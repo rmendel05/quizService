@@ -1,0 +1,40 @@
+package com.rmendel.quizManager.application;
+
+import java.util.ArrayList;
+
+import com.rmendel.quizManager.api.QuerySpecDto;
+import com.rmendel.quizManager.api.QuestionDto;
+
+public class Question {
+
+	public Question() {
+	}
+	
+	public QuestionDto getObjectDtoByID(String id) {
+		
+	}
+	
+	public QuestionDto[] getObjectDtos(QuerySpecDto query) {
+		
+	}
+	
+	public QuestionDto insertObjectDto(QuestionDto toCreate) {
+		
+	}
+	
+	public QuestionDto updateObjectDto(QuestionDto toUpdate) {
+		
+	}
+	
+	public QuestionData getObjectByID(String id) {
+		
+	}
+
+	public ArrayList<QuestionData> getObjects(QuerySpecDto query) {
+		
+	}
+	
+	public QuestionData insertObject(QuestionData toCreate) {
+		
+	}
+}

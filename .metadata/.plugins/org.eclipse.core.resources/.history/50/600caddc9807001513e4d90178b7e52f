@@ -1,0 +1,9 @@
+package com.rmendel.rmObjectModel;
+
+public class BaseCsvParser {
+
+	public BaseCsvParser() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

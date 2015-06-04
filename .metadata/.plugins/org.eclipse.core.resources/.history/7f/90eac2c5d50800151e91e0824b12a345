@@ -1,0 +1,39 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "questionQuery")
+public class QuerySpec {
+
+	public QuerySpec() {
+	}
+
+	@XmlElementWrapper(name = "filters")
+	@XmlElement(name = "filter")
+	public FilterSpec[] getFilters() {
+		return filters;
+	}
+	public void setFilters(FilterSpec[] filters) {
+		this.filters = filters;
+	}
+	@XmlElementWrapper(name = "sortElements")
+	@XmlElement(name = "sortElement")
+	public SortSpec[] getSortElements() {
+		return sortElements;
+	}
+	public void setSortElements(SortSpec[] sortElements) {
+		this.sortElements = sortElements;
+	}
+	public PageSpec getPage() {
+		return page;
+	}
+	public void setPage(PageSpec page) {
+		this.page = page;
+	}
+
+	private FilterSpec[] filters = new FilterSpec[]{};
+	private SortSpec[] sortElements = new SortSpec[]{};
+	private PageSpec page = null;
+}

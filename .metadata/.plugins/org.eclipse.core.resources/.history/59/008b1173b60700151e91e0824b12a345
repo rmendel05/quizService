@@ -1,0 +1,9 @@
+package com.rmendel.rmObjectModel;
+
+public class ExpressionUtilities {
+
+	public ExpressionUtilities() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

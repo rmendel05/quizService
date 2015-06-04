@@ -1,0 +1,11 @@
+package com.rmendel.quizModel;
+
+import java.util.List;
+
+@XmlRootElement(name = "question")
+public final class Question {
+	private String externalID;
+	private String questionText;
+	private List<QuestionResponse> responses;
+
+}

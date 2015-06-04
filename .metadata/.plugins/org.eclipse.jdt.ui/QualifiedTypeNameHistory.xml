@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
+<fullyQualifiedTypeName name="javax.ws.rs.GET"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="java.awt.PageAttributes.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="javax.ws.rs.POST"/>
+<fullyQualifiedTypeName name="com.rmendel.rmObjectModel.BaseExtractObject"/>
+<fullyQualifiedTypeName name="com.sun.jersey.spi.container.servlet.ServletContainer"/>
+<fullyQualifiedTypeName name="org.eclipse.jetty.servlet.ServletContextHandler"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PathParam"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlAnyElement"/>
+<fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlElement"/>
+<fullyQualifiedTypeName name="com.rmendel.quizModel.QuizAnswer"/>
+<fullyQualifiedTypeName name="com.rmendel.quizInterface.QuestionService"/>
+<fullyQualifiedTypeName name="com.rmendel.quizModel.QuizQuestion"/>
+<fullyQualifiedTypeName name="com.rmendel.rmObjectModel.ObjectResponse"/>
+<fullyQualifiedTypeName name="com.rmendel.rmObjectModel.CsvReader"/>
+<fullyQualifiedTypeName name="com.rmendel.rmObjectModel.BaseCsvParser"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.rmendel.framework.ExpressionUtilities"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.application.Question"/>
+<fullyQualifiedTypeName name="com.rmendel.framework.BaseLogMessage"/>
+<fullyQualifiedTypeName name="com.rmendel.framework.ResponseLogMessage"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="com.rmendel.framework.ResponseLogEntry"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.api.QuestionDto"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.api.AnswerDto"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.api.QuerySpecDto"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.api.FilterSpecDto"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.application.QuestionTable"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.api.SortSpecDto"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.api.PageSpecDto"/>
+<fullyQualifiedTypeName name="com.rmendel.framework.RMLog"/>
+<fullyQualifiedTypeName name="com.rmendel.framework.TaskLogEntry"/>
+<fullyQualifiedTypeName name="com.rmendel.quizManager.application.QuestionCache"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+</qualifiedTypeNameHistroy>

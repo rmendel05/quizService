@@ -1,0 +1,16 @@
+package com.rmendel.rmObjectModel;
+
+public abstract class BaseExtractObject {
+	public BaseExtractObject() {
+	}
+	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	private String id = null;
+}

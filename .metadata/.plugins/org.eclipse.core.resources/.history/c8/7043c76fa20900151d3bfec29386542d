@@ -1,0 +1,13 @@
+package com.rmendel.framework;
+
+public class ResponseLogEntry<ResponseObjectType extends IApiObject> extends BaseLogEntry {
+
+	public ResponseLogEntry(String context) {
+		super(context);
+	}
+
+	@Override
+	public void close() {
+		
+	}
+}

@@ -1,0 +1,9 @@
+package com.rmendel.quizModel;
+
+public class QuerySort {
+
+	public QuerySort() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.rmendel.quizInterface.test;
+
+import com.rmendel.quizInterface.QuestionService;
+import com.rmendel.quizModel.QuizQuestion;
+import com.rmendel.rmObjectModel.ObjectResponse;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class QuestionServiceTest 
+    extends TestCase
+{
+    public QuestionServiceTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( QuestionServiceTest.class );
+    }
+
+    public void testApp()
+    {
+    	QuestionService service = new QuestionService();
+    	ObjectResponse<QuizQuestion> response = service.getQuestion("abc");
+    }
+}

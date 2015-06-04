@@ -1,0 +1,17 @@
+package com.rmendel.quizManager.application;
+
+import com.rmendel.quizManager.api.AnswerDto;
+
+public class Answer {
+
+	public Answer() {
+	}
+
+	public static AnswerDto objectToDto(AnswerData toConvert) {
+		AnswerDto toReturn = new AnswerDto();
+		toReturn.setId(toConvert.getId());
+		toReturn.setQuestionID(toConvert.getQuestionID());
+		toReturn.setResponseText(toConvert.getResponseText());
+		return toReturn;
+	}
+}

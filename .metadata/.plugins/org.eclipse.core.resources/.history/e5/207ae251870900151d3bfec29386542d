@@ -1,0 +1,28 @@
+package com.rmendel.framework;
+
+public abstract class BaseLogMessage implements AutoCloseable {
+
+	public BaseLogMessage(String message) {
+		this.context = message;
+	}
+
+	public String getMessage() {
+		return context;
+	}
+
+	public void setMessage(String message) {
+		this.context = message;
+	}
+
+	public boolean isSuccess() {
+		return isSuccess;
+	}
+
+	public void setSuccess(boolean isSuccess) {
+		this.isSuccess = isSuccess;
+	}
+
+	// TODO Add ResponseLogMessage
+	private String context = null;
+	private boolean isSuccess = false;
+}

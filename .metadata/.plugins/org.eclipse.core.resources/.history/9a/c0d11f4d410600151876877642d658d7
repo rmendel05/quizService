@@ -1,0 +1,10 @@
+package com.rmendel.quizModel;
+
+import java.util.List;
+
+public final class Question {
+	private String externalID;
+	private String questionText;
+	private List<QuestionResponse> responses;
+
+}

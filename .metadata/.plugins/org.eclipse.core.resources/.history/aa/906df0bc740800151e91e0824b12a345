@@ -1,0 +1,35 @@
+package com.rmendel.quizInterface.test;
+
+import com.rmendel.quizInterface.QuestionService;
+import com.rmendel.quizModel.Question;
+import com.rmendel.quizModel.QuizQuestionResponse;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class QuestionServiceTest 
+    extends TestCase
+{
+    public QuestionServiceTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( QuestionServiceTest.class );
+    }
+
+    public void testGetQuestion()
+    {
+    	QuestionService service = new QuestionService();
+    	String questionID = "ABC";
+    	QuizQuestionResponse response = service.getQuestion(questionID);
+    	assertTrue("Response was null.", response != null);
+    	assertTrue("Service method success was false.", response.isSuccess());
+    	assertTrue("Response.result was null.", response.getResults() != null);
+    	assertEquals("Incorrect number of results returned.", 1, response.getResults().length);
+    	assertTrue("Wrong object was returned.", response.getResults()[1].getId().equals(questionID));
+    }
+}

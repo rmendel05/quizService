@@ -1,0 +1,8 @@
+package com.rmendel.framework;
+
+public class TaskLogEntry extends BaseLogEntry {
+
+	public TaskLogEntry(String context) {
+		super(context);
+	}
+}

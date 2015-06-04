@@ -1,0 +1,9 @@
+package com.rmendel.quizModel;
+
+public class QueryFilter {
+
+	public QueryFilter() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

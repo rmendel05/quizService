@@ -1,0 +1,19 @@
+package com.rmendel.quizModel;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "questionQuery")
+public class QuestionQuery {
+
+	public QuestionQuery() {
+	}
+
+	private ArrayList<QueryFilter> filters = new ArrayList<QueryFilter>();
+//	private String keyWords = null;
+//	private String wordCount = null;
+//	private Integer distractorCount = null;
+	private ArrayList<QuerySort> sorts = new ArrayList<QuerySort>();
+	private PageSpec page = null;
+}

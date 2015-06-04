@@ -1,0 +1,23 @@
+package com.rmendel.quizManager.application.test;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class QuestionCacheTest extends TestCase
+{
+    public QuestionCacheTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( QuestionCacheTest.class );
+    }
+
+    public void testQuestionCache() throws Exception
+    {
+    	
+    }
+}

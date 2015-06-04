@@ -1,0 +1,57 @@
+package com.rmendel.quizModel;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "questionResponse")
+public final class QuestionResponse {
+
+	public QuestionResponse(
+			boolean isSuccess,
+			Question result) {
+		this.results = new Question[] {result};
+		this.isSuccess = isSuccess;
+	}
+
+	public QuestionResponse(
+			boolean isSuccess,
+			Question[] results) {
+		this.results = results;
+		this.isSuccess = isSuccess;
+	}
+
+	public QuestionResponse(Exception e) {
+		errorMessage = e.getMessage();
+	}
+
+	public boolean isSuccess() {
+		return isSuccess;
+	}
+
+	public void setSuccess(boolean isSuccess) {
+		this.isSuccess = isSuccess;
+	}
+
+	public String getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(String errorMessage) {
+		this.errorMessage = errorMessage;
+	}
+
+	@XmlElementWrapper(name = "results")
+	@XmlElement(name = "result")
+	public Question[] getResults() {
+		return results;
+	}
+
+	public void setResults(Question[] results) {
+		this.results = results;
+	}
+
+	private boolean isSuccess = false;
+	private String errorMessage = null;
+	private Question[] results = null;
+}

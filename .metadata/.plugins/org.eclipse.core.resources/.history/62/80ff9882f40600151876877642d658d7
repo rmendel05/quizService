@@ -1,0 +1,31 @@
+package com.rmendel.quizModel;
+
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "question")
+public final class Question {
+	private String externalID;
+	public String getExternalID() {
+		return externalID;
+	}
+	public void setExternalID(String value) {
+		externalID = value;  
+	}	
+	private String questionText;
+	public String getQuestionText() {
+		return questionText;
+	}
+	public void setQuestionText(String questionText) {
+		this.questionText = questionText;
+	}
+	public List<QuestionResponse> getResponses() {
+		return responses;
+	}
+	public void setResponses(List<QuestionResponse> responses) {
+		this.responses = responses;
+	}
+	private List<QuestionResponse> responses;
+
+}

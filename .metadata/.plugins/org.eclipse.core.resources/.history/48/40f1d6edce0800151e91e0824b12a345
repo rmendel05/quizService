@@ -1,0 +1,42 @@
+package com.rmendel.quizManager.application;
+
+import java.util.HashMap;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+import com.rmendel.framework.ExpressionUtilities;
+import com.rmendel.quizManager.api.Answer;
+import com.rmendel.quizManager.api.Question;
+
+public class KeyWordIndex<ItemType> {
+
+	public KeyWordIndex() {
+	}
+
+	private void put(
+			String phrase,
+			ItemType toAdd) {
+		for(String word:phrase.split(" "))
+			putKeyWordReference(word, toAdd);
+	}
+	
+	private void putKeyWordReference(
+			String rawWord,
+			ItemType item) {
+		String word = rawWord.trim().toLowerCase();
+		if(ExpressionUtilities.isTrivial(word))
+			return;
+		
+		SortedSet<ItemType> itemSet;
+		if(rowsByKeyWord.containsKey(word)) {
+			itemSet = rowsByKeyWord.get(word);
+		} else {
+			itemSet = new TreeSet<ItemType>();
+			rowsByKeyWord.put(word, itemSet);
+		}
+		itemSet.add(item);
+	}
+
+	private HashMap<String, SortedSet<ItemType>> rowsByKeyWord =
+			new HashMap<String, SortedSet<ItemType>>();
+}

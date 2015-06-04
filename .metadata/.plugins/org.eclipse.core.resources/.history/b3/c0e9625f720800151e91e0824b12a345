@@ -1,0 +1,10 @@
+package com.rmendel.quizModel.query;
+
+public class SortSpec {
+
+	public SortSpec() {
+	}
+
+	private String sortByAttribute = null;
+	private boolean isDescending = false;
+}

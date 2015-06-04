@@ -1,0 +1,44 @@
+package com.rmendel.quizModel;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.rmendel.rmObjectModel.IApiObject;
+
+@XmlRootElement(name = "quizQuestion")
+public final class QuizQuestion implements IApiObject {
+	public QuizQuestion() {
+	}
+	
+	public String getObjectNotion() {
+		return "quizQuestion";
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getQuestionText() {
+		return questionText;
+	}
+	public void setQuestionText(String questionText) {
+		this.questionText = questionText;
+	}
+	public QuizAnswer getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(QuizAnswer answer) {
+		this.answer = answer;
+	}
+
+	private String id = null;
+	private String questionText = null;
+	private QuizAnswer answer = null;
+	private QuizAnswer[] distractors = new QuizAnswer[]{};
+}

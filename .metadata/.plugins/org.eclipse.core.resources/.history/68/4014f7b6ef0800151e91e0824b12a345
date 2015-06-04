@@ -1,0 +1,26 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "sortSpec")
+public class SortSpec {
+
+	public SortSpec() {
+	}
+
+	public String getSortByAttribute() {
+		return sortByAttribute;
+	}
+	public void setSortByAttribute(String sortByAttribute) {
+		this.sortByAttribute = sortByAttribute;
+	}
+	public boolean isDescending() {
+		return isDescending;
+	}
+	public void setDescending(boolean isDescending) {
+		this.isDescending = isDescending;
+	}
+
+	private String sortByAttribute = null;
+	private boolean isDescending = false;
+}

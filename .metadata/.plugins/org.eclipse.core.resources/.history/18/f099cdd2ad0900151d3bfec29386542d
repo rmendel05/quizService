@@ -1,0 +1,29 @@
+package com.rmendel.framework.test;
+
+import com.rmendel.framework.ResponseLogEntry;
+import com.rmendel.quizManager.api.QuestionResponseDto;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class ResponseLogEntryTest extends TestCase
+{
+    public ResponseLogEntryTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( ResponseLogEntryTest.class );
+    }
+
+    public void testResponseLogEntry()
+    {
+    	try(ResponseLogEntry<QuestionResponseDto> logEntry = 
+				 new ResponseLogEntry<QuestionResponseDto>("ResponseLogEntryTest.testResponseLogEntry")) {
+    		
+    	}
+    }
+}

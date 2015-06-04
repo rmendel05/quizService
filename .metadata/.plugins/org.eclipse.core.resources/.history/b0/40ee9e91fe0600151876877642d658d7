@@ -1,0 +1,18 @@
+package com.rmendel.quizModel;
+
+public final class QuizAnswer {
+	private String externalID;
+	public String getExternalID() {
+		return externalID;
+	}
+	public void setExternalID(String value) {
+		externalID = value;  
+	}
+	private String responseText;
+	public String getResponseText() {
+		return responseText;
+	}
+	public void setResponseText(String value) {
+		responseText = value;  
+	}
+}

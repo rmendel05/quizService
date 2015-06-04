@@ -1,0 +1,10 @@
+package com.rmendel.quizModel;
+
+public class PageSpec {
+
+	public PageSpec() {
+	}
+
+	private Integer rowsPerPage = null;
+	private Integer pageOffset = null;
+}

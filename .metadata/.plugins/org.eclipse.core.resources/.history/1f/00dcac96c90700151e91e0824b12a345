@@ -1,0 +1,9 @@
+package com.rmendel.quizModel;
+
+public class QuestionQuery {
+
+	public QuestionQuery() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

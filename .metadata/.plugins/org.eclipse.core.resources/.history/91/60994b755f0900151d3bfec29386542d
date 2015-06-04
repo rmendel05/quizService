@@ -1,0 +1,66 @@
+package com.rmendel.quizManager.application;
+
+import java.util.ArrayList;
+
+import com.rmendel.framework.ExpressionUtilities;
+import com.rmendel.quizManager.api.QuerySpecDto;
+import com.rmendel.quizManager.api.QuestionDto;
+
+public class Question {
+
+	public Question() {
+	}
+	
+	public QuestionDto getObjectDtoByID(String id) {
+		
+	}
+	
+	public QuestionDto[] getObjectDtos(QuerySpecDto query) {
+		
+	}
+	
+	public QuestionDto insertObjectDto(QuestionDto toCreate) {
+		
+	}
+	
+	public QuestionDto updateObjectDto(QuestionDto toUpdate) {
+		
+	}
+	
+	public QuestionData getObjectByID(String id) throws Exception {
+		QuestionTable table = QuestionCache.getInstanceQuestionTable();
+		return table.getRowByID(id);
+	}
+
+	public ArrayList<QuestionData> getObjects(QuerySpecDto query) throws Exception {
+		QuestionTable table = QuestionCache.getInstanceQuestionTable();
+		return table.getRows(query);
+	}
+	
+	public QuestionData insertObject(QuestionData toCreate) {
+		
+	}
+	
+	public QuestionData updateObject(QuestionData toUpdate) {
+		
+	}
+	
+	private int updateWordCount(QuestionData question) {
+		int toReturn = 0;
+		
+		if(!ExpressionUtilities.isTrivial(question.getQuestionText()))
+			toReturn += question.getQuestionText().split(" ").length;
+		
+		AnswerData AnswerData = question.getAnswer();
+		if(AnswerData != null && !ExpressionUtilities.isTrivial(AnswerData.getResponseText()))
+			toReturn += AnswerData.getResponseText().split(" ").length;
+
+		for(AnswerData distractor:question.getDistractors())
+			if(!ExpressionUtilities.isTrivial(distractor.getResponseText()))
+				toReturn += distractor.getResponseText().split(" ").length;
+		
+		return toReturn;
+	}
+	
+
+}

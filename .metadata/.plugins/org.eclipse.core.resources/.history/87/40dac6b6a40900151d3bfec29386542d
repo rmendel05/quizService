@@ -1,0 +1,15 @@
+package com.rmendel.framework;
+
+public class ResponseLogEntry<ResponseObjectType extends ILoggableResponse> extends BaseLogEntry {
+
+	public ResponseLogEntry(String context) {
+		super(context);
+	}
+
+	@Override
+	protected String getAdditionalMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,36 @@
+package com.rmendel.quizModel;
+
+import java.util.ArrayList;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.rmendel.rmObjectModel.BaseExtractObject;
+
+@XmlRootElement(name = "quizQuestion")
+public final class QuizQuestion extends BaseExtractObject {
+	public QuizQuestion() {
+		super();
+	}
+	
+	@Override
+	public String getObjectNotion() {
+		return "quizQuestion";
+	}
+
+	public String getQuestionText() {
+		return questionText;
+	}
+	public void setQuestionText(String questionText) {
+		this.questionText = questionText;
+	}
+	public ArrayList<QuizAnswer> getDistractors() {
+		return distractors;
+	}
+	public void setDistractors(ArrayList<QuizAnswer> responses) {
+		this.distractors = responses;
+	}
+
+	private String questionText = null;
+	private QuizAnswer answer = null;
+	private ArrayList<QuizAnswer> distractors = new ArrayList<QuizAnswer>();
+}

@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.application;
+
+public class QuestionCache {
+
+	public QuestionCache() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

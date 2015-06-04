@@ -1,0 +1,12 @@
+package com.rmendel.quizModel.query;
+
+public class FilterSpec {
+
+	public FilterSpec() {
+		// TODO Auto-generated constructor stub
+	}
+
+	private String filterType = null;
+	private String filterValue = null;
+	private String comparisonType = null;
+}

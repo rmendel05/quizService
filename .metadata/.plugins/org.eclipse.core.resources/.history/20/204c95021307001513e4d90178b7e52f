@@ -1,0 +1,33 @@
+package com.rmendel.quizInterface;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.rmendel.quizModel.QuizQuestion;
+import com.rmendel.rmObjectModel.ObjectResponse;
+
+@Path("/questionService")
+public final class QuestionService {
+	 @GET
+	 @Path("/getQuestion/{id}")
+	 @Produces(MediaType.APPLICATION_JSON)
+	 public ObjectResponse<QuizQuestion> getQuestion(String id) {
+		 try {
+			 throw new UnsupportedOperationException("getQuestion() method is not supported.");
+		 } catch(Exception e) {
+			 return new ObjectResponse<QuizQuestion>(e);
+		 }
+	 }
+	 
+//	 @POST
+//	 @Path("/postEmployee")
+//	 @Produces(MediaType.APPLICATION_JSON)
+//	 public void postEmployee(Employee employee) {
+//	  System.out.println("Output json server .... \n");
+//	  System.out.println(employee);
+//	 } 
+
+}

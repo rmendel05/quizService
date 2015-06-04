@@ -1,0 +1,14 @@
+package com.rmendel.rmObjectModel;
+
+public final class ObjectResponse extends BaseOperationResponse {
+
+	public ObjectResponse() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public ObjectResponse(Exception e) {
+		super(e);
+		// TODO Auto-generated constructor stub
+	}
+
+}

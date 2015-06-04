@@ -1,0 +1,10 @@
+package com.rmendel.rmObjectModel;
+
+public abstract class BaseQuerySpec {
+
+	public BaseQuerySpec() {
+	}
+
+	private String rootObjectNotion = null;
+	private 
+}

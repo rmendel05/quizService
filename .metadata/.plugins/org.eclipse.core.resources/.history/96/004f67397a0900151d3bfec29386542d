@@ -1,0 +1,9 @@
+package com.rmendel.framework;
+
+public class BaseLogMessage {
+
+	public BaseLogMessage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

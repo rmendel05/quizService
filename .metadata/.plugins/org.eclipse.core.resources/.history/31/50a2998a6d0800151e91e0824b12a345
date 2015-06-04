@@ -1,0 +1,15 @@
+package com.rmendel.rmObjectModel;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "voidResponse")
+public final class VoidResponse extends BaseOperationResponse {
+	public VoidResponse(boolean isSuccess) {
+		super();
+		setSuccess(isSuccess);
+	}
+	
+	public VoidResponse(Exception e) {
+		super(e);
+	}
+}

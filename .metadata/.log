@@ -1,0 +1,249 @@
+!SESSION 2015-05-28 16:53:28.656 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /home/rob/Project/quizService -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-05-28 16:53:37.433
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:02:08.981
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:02:09.174
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:02:09.202
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:04:23.934
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:04:24.129
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:04:24.161
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:13:24.988
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.0 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:13:25.152
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.0 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:13:25.179
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.0 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:13:29.586
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:13:29.637
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:13:29.667
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:14:49.800
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.111 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:14:49.954
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.111 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:14:49.977
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.111 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:14:58.510
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:14:58.551
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:14:58.569
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.1 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:02.062
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.0 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:02.106
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.0 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:02.132
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.0 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:06.924
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:07.100
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:07.135
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:12.800
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:12.847
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:15:12.870
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:16:07.557
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:16:07.666
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:16:07.688
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:16:35.568
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:16:35.605
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-05-30 13:16:35.623
+!MESSAGE The POM for com.sun.jersey:jersey-server:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.core.resources 4 368 2015-05-30 16:06:40.849
+!MESSAGE Variable references non-existent resource : ${workspace_loc:/quizService}
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.151
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.162
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.180
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.436
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.461
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.469
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:06:54.489
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:14.923
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:14.935
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:14.951
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:15.123
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:15.136
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:15.142
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:15.154
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:20.900
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:20.913
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:20.931
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:21.149
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:21.160
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:21.167
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:21.179
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.205
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.218
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.235
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.454
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.483
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.490
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2015-05-30 16:07:28.502
+!MESSAGE Could not substitute variable ${workspace_loc:/quizService}.
+!SESSION 2015-05-30 17:21:58.963 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-05-30 17:22:11.175
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2015-05-31 10:53:26.899 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /home/rob/Project/quizService -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-05-31 10:53:38.619
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2015-06-02 11:58:30.909 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-06-02 11:59:06.669
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-06-02 12:00:43.058
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2015-06-03 04:37:56.051 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-06-03 04:38:08.599
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+!SESSION 2015-06-03 12:13:38.807 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-06-03 12:13:52.115
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]

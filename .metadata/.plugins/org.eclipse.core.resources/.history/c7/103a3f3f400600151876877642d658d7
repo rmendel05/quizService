@@ -1,0 +1,8 @@
+package com.rmendel.quizModel;
+
+public final class Question {
+	private String externalID;
+	private String questionText;
+	private String 
+
+}

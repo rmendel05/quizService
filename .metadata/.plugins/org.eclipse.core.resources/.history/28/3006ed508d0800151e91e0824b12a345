@@ -1,0 +1,32 @@
+package com.rmendel.quizManager.application;
+
+import com.rmendel.framework.BaseCsvParser;
+import com.rmendel.quizManager.api.Question;
+
+public final class QuestionCsvParser extends BaseCsvParser {
+	public static final String CSV_FILE_FORMAT = "[question]|[answer]|[distractor 1],[distractor 2],...,[distractor N]";
+	
+	public QuestionCsvParser() {
+		super();
+	}
+	
+	public QuestionTable getData() {
+		return table;
+	}
+
+	@Override
+	public void processValues(String[] values) throws Exception {
+		Question Question = table.NewQuestion();
+		int valueCount = values.length;
+		if(valueCount >= 1)
+			Question.setQuestionText(values[0]);
+		if(valueCount >= 2)
+			Question. = values[1];
+		if(valueCount >= 3)
+			Question.lastName = values[2];
+		
+		table.putRow(Question);
+	}
+
+	private QuestionTable table = new QuestionTable();
+}

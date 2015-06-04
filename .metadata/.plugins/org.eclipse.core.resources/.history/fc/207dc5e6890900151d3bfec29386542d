@@ -1,0 +1,21 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.rmendel.framework.IApiObject;
+
+@XmlRootElement(name = "sortSpec")
+public class SortSpecDto implements IApiObject {
+
+	public SortSpecDto() {
+	}
+
+	public String getSortByAttribute() {
+		return sortByAttribute;
+	}
+	public void setSortByAttribute(String sortByAttribute) {
+		this.sortByAttribute = sortByAttribute;
+	}
+
+	private String sortByAttribute = null;
+}

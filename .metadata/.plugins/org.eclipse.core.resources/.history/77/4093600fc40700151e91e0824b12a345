@@ -1,0 +1,34 @@
+package com.rmendel.quizModel;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.rmendel.rmObjectModel.BaseExtractObject;
+
+@XmlRootElement(name = "quizAnswer")
+public final class QuizAnswer extends BaseExtractObject {
+	public QuizAnswer() {
+		super();
+	}
+	
+	@Override
+	public String getObjectNotion() {
+		return "quizAnswer";
+	}
+
+	public String getResponseText() {
+		return responseText;
+	}
+	public void setResponseText(String value) {
+		responseText = value;  
+	}
+
+	public String getQuizQuestionID() {
+		return quizQuestionID;
+	}
+	public void setQuizQuestionID(String quizQuestionID) {
+		this.quizQuestionID = quizQuestionID;
+	}
+
+	private String responseText;
+	private String quizQuestionID = null;
+}

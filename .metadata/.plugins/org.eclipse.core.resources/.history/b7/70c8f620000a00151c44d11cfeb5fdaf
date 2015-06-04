@@ -1,0 +1,16 @@
+package com.rmendel.framework;
+
+public class TaskLogEntry extends BaseLogEntry {
+
+	public TaskLogEntry(String context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	protected String getAdditionalMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

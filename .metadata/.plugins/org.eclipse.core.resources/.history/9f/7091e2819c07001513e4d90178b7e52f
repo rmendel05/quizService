@@ -1,0 +1,9 @@
+package com.rmendel.quizInterface.test;
+
+public class QuestionServiceTest {
+
+	public QuestionServiceTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

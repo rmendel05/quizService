@@ -1,0 +1,9 @@
+package com.rmendel.rmObjectModel;
+
+public class RMLog {
+
+	public RMLog() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

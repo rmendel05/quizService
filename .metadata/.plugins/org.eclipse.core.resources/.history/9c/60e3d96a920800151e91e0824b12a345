@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.application.test;
+
+public class QuestionCsvParserTest {
+
+	public QuestionCsvParserTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

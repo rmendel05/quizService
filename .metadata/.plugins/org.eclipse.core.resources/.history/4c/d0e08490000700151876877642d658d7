@@ -1,0 +1,18 @@
+package com.rmendel.rmObjectModel;
+
+public final class ObjectResponse<ObjectType> extends BaseOperationResponse {
+
+	public ObjectResponse(
+			boolean isSuccess,
+			ObjectType result) {
+		super();
+		this.result = result;
+		setSuccess(isSuccess);
+	}
+
+	public ObjectResponse(Exception e) {
+		super(e);
+	}
+
+	private ObjectType result = null;
+}

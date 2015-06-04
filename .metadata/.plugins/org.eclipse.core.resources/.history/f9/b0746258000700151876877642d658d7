@@ -1,0 +1,16 @@
+package com.rmendel.rmObjectModel;
+
+public final class ObjectResponse<ObjectType extends BaseExtractObject> 
+	extends BaseOperationResponse {
+
+	public ObjectResponse(boolean isSuccess) {
+		super();
+		setSuccess(isSuccess);
+	}
+
+	public ObjectResponse(Exception e) {
+		super(e);
+	}
+
+	ArrayList<ObjectType> 
+}

@@ -1,0 +1,9 @@
+package com.rmendel.quizInterface;
+
+public class QuizQuestionResponse {
+
+	public QuizQuestionResponse() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

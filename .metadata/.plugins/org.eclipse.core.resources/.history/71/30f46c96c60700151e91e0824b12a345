@@ -1,0 +1,8 @@
+package com.rmendel.rmObjectModel;
+
+public abstract class BaseFilterSpec {
+
+	public BaseFilterSpec() {
+	}
+
+}

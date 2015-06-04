@@ -1,0 +1,73 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+
+import com.rmendel.framework.IApiObject;
+
+@XmlRootElement(name = "question")
+public final class QuestionDto implements IApiObject {
+	
+	public QuestionDto() {
+	}
+	
+	public QuestionDto(
+			String questionText, 
+			AnswerDto answerDto,
+			AnswerDto[] distractors) {
+		this.questionText = questionText;
+		this.answerDto = answerDto;
+		this.distractors = distractors;
+	}
+
+	public String getObjectNotion() {
+		return "question";
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getQuestionText() {
+		return questionText;
+	}
+	public void setQuestionText(String questionText) {
+		this.questionText = questionText;
+	}
+	public AnswerDto getAnswer() {
+		return answerDto;
+	}
+
+	public void setAnswer(AnswerDto answerDto) {
+		this.answerDto = answerDto;
+	}
+
+	@XmlElementWrapper(name = "distractors")
+	@XmlElement(name = "distractor")
+	public AnswerDto[] getDistractors() {
+		return distractors;
+	}
+
+	public void setDistractors(AnswerDto[] distractors) {
+		this.distractors = distractors;
+	}
+
+	public Integer getWordCount() {
+		return wordCount;
+	}
+
+	public void setWordCount(Integer wordCount) {
+		this.wordCount = wordCount;
+	}
+
+	private String id = null;
+	private String questionText = null;
+	private AnswerDto answerDto = null;
+	private AnswerDto[] distractors = new AnswerDto[]{};
+	private Integer wordCount = 0;
+}

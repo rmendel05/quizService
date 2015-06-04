@@ -1,0 +1,11 @@
+package com.rmendel.quizManager.api;
+
+public interface ILoggableResponse {
+
+	String getId();
+
+	boolean isSuccess();
+
+	String getErrorMessage();
+
+}

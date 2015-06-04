@@ -1,0 +1,45 @@
+package com.rmendel.quizManager.application;
+
+import com.rmendel.framework.CsvReader;
+import com.rmendel.framework.RMLog;
+
+public class QuestionCache {
+
+	public QuestionCache() {
+		loadQuestionData();
+	}
+	
+	public static QuestionCache getInstance() throws Exception {
+		if(instance == null) {
+			initializeSingleton();
+		}
+		
+		return instance;
+	}
+	
+	public QuestionTable getQuestionTable() {
+		return questionTable;
+	}
+
+	private static synchronized void initializeSingleton() throws Exception {
+		instance = new QuestionCache();
+	}
+	
+	private void loadQuestionData() {
+    	CsvReader reader = new CsvReader("./QuestionData.csv");
+    	QuestionCsvParser parser = new QuestionCsvParser();
+    	parser.setColumnSeparator("|");
+    	try {
+			reader.readAllLines(parser);
+		} catch (Exception e) {
+			Exception loadException = new Exception(
+					"Failed to load question data into cache.",
+					e);
+			RMLog.error(loadException);
+		}
+    	questionTable = parser.getData();
+	}
+	
+	private static QuestionCache instance = null;
+	private QuestionTable questionTable = new QuestionTable();
+}

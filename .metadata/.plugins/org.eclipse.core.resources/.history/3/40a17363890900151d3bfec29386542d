@@ -1,0 +1,19 @@
+package com.rmendel.quizManager.api;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "sortSpec")
+public class SortSpecDto {
+
+	public SortSpecDto() {
+	}
+
+	public String getSortByAttribute() {
+		return sortByAttribute;
+	}
+	public void setSortByAttribute(String sortByAttribute) {
+		this.sortByAttribute = sortByAttribute;
+	}
+
+	private String sortByAttribute = null;
+}

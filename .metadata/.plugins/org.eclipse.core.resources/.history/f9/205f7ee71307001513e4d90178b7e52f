@@ -1,0 +1,12 @@
+package com.rmendel.rmObjectModel;
+
+public final class VoidResponse extends BaseOperationResponse {
+	public VoidResponse(boolean isSuccess) {
+		super();
+		setSuccess(isSuccess);
+	}
+	
+	public VoidResponse(Exception e) {
+		super(e);
+	}
+}

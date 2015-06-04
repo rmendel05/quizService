@@ -1,0 +1,39 @@
+package com.rmendel.quizManager.service;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.rmendel.quizManager.api.AnswerDto;
+import com.rmendel.quizManager.api.QuestionDto;
+import com.rmendel.quizManager.api.QuestionResponse;
+
+@Path("/questionService")
+public final class QuestionService {
+	 @GET
+	 @Path("/getQuestion/{id}")
+	 @Produces(MediaType.APPLICATION_JSON)
+	 public QuestionResponse getQuestion(@PathParam("id") String id) {
+		 try {
+			 QuestionDto rawReturn = new QuestionDto();
+			 rawReturn.setId("ABC");
+			 rawReturn.setQuestionText("What is the meaning of life?");
+			 AnswerDto answer1 = new AnswerDto();
+			 answer1.setId("ABC-1");
+			 answer1.setQuestionID("ABC");
+			 answer1.setResponseText("The answer is 7.");
+			 rawReturn.setDistractors(new AnswerDto[]{answer1});
+			 QuestionResponse toReturn = new QuestionResponse(true, rawReturn);
+			 return toReturn;
+		 } catch(Exception e) {
+			 return new QuestionResponse(e);
+		 }
+	 }
+
+	 // TODO Document filter types for QuestionDto queries: keyWords
+	 // TODO Document sort elements for QuestionDto queries: id, questionText, wordCount, distractorCount
+
+}

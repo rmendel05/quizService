@@ -1,0 +1,9 @@
+package com.rmendel.framework;
+
+public class ResponseLogMessage extends BaseLogMessage {
+
+	public ResponseLogMessage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

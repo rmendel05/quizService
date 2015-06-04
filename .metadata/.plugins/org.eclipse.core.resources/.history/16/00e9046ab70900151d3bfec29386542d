@@ -1,0 +1,83 @@
+package com.rmendel.quizManager.service.test;
+
+import java.util.UUID;
+
+import com.rmendel.quizManager.api.AnswerDto;
+import com.rmendel.quizManager.api.QuestionDto;
+import com.rmendel.quizManager.api.QuestionResponseDto;
+import com.rmendel.quizManager.service.QuestionService;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
+
+public class QuestionServiceTest 
+    extends TestCase
+{
+    public QuestionServiceTest( String testName )
+    {
+        super( testName );
+    }
+
+    public static Test suite()
+    {
+        return new TestSuite( QuestionServiceTest.class );
+    }
+
+    public void testCrud()
+    {
+    	QuestionService service = new QuestionService();
+    	
+    	// Create some test data
+    	QuestionDto q1 = getQuestion();
+    	QuestionDto q2 = getQuestion();
+    	QuestionDto q3 = getQuestion();
+    	
+    	// insert the data
+    	QuestionDto q1Result = getSingleResult(service.insert(q1));
+    	QuestionDto q2Result = getSingleResult(service.insert(q2));
+    	QuestionDto q3Result = getSingleResult(service.insert(q3));
+    	
+    	// validate word count
+    	assertEquals("Incorrect word count.", 7, (int)q1Result.getWordCount());
+    	
+    	// verify the data was inserted and can be looked up by id
+    	QuestionDto q1Lookup = getSingleResult(service.getObject(q1Result.getId()));    	
+    	QuestionDto q2Lookup = getSingleResult(service.getObject(q2Result.getId()));    	
+    	QuestionDto q3Lookup = getSingleResult(service.getObject(q3Result.getId()));
+    	
+    	// update 
+    	QuestionDto q1Updated = getQuestion();
+    	q1Updated.setId(q1Result.getId());
+    	QuestionDto q1UpdateResult = getSingleResult(service.update(q1Updated));
+    }
+    
+    private QuestionDto getSingleResult(QuestionResponseDto response) {
+    	validateResponse(response);
+    	assertEquals("Wrong number of objects returned.", 1, response.getRowCount());
+    	return response.getResults()[0];
+    }
+    
+    private void validateResponse(QuestionResponseDto response) {
+    	assertTrue("Response was null.", response != null);
+    	assertTrue("Unsuccessful response: " + response.getErrorMessage(), response.isSuccess());
+    }
+    
+    private QuestionDto getQuestion() {
+    	QuestionDto toReturn = new QuestionDto();
+    	toReturn.setQuestionText(getUniqueID() + " more words?");
+    	toReturn.setAnswer(getAnswer());
+    	toReturn.setDistractors(new AnswerDto[] {getAnswer(),getAnswer(),getAnswer()});
+    	return toReturn;
+    }
+    
+    private AnswerDto getAnswer() {
+    	AnswerDto toReturn = new AnswerDto();
+    	toReturn.setResponseText(getUniqueID());
+    	return toReturn;
+    }
+    
+    private String getUniqueID() {
+    	return UUID.randomUUID().toString();
+    }
+}
