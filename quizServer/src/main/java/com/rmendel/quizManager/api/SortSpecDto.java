@@ -42,7 +42,6 @@ public class SortSpecDto implements IApiObject {
 		this.sortByAttribute = sortByAttribute;
 	}
 
-	private String objectNotion = null;
 	private String id = null;
 	private String sortByAttribute = null;
 }

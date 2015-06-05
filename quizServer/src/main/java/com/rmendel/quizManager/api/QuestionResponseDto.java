@@ -84,7 +84,6 @@ public final class QuestionResponseDto implements ILoggableResponse {
 	}
 	public void setRowCount() {}
 
-	private String objectNotion = null;
 	private String id = UUID.randomUUID().toString();
 	private boolean isSuccess = false;
 	private String errorMessage = null;

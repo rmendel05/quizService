@@ -2,7 +2,6 @@ package com.rmendel.quizManager.service;
 
 import javax.ws.rs.ext.Provider;
 
-import com.rmendel.framework.RMLog;
 import com.sun.jersey.spi.container.ContainerRequest;
 import com.sun.jersey.spi.container.ContainerResponse;
 import com.sun.jersey.spi.container.ContainerResponseFilter;

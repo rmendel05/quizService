@@ -75,7 +75,6 @@ public final class QuestionDto implements IApiObject {
 		this.wordCount = wordCount;
 	}
 
-	private String objectNotion = null;
 	private String id = null;
 	private String questionText = null;
 	private AnswerDto answerDto = null;

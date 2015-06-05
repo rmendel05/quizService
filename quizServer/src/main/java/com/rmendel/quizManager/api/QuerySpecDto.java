@@ -60,7 +60,6 @@ public class QuerySpecDto implements IApiObject {
 		this.page = page;
 	}
 
-	private String objectNotion = null;
 	private String id = null;
 	private FilterSpecDto filter = null;
 	private SortSpecDto sort = null;

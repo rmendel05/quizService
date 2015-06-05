@@ -4,7 +4,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rmendel.framework.IApiObject;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
@@ -51,7 +50,6 @@ public final class AnswerDto implements IApiObject {
 		this.questionID = quizQuestionID;
 	}
 
-	private String objectNotion = null;
 	private String id = null;
 	private String responseText = null;
 	private String questionID = null;

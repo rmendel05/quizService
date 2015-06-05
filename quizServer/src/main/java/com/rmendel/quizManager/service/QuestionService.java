@@ -18,6 +18,8 @@ import com.wordnik.swagger.annotations.ApiImplicitParams;
 import com.wordnik.swagger.annotations.ApiImplicitParam;
 import com.wordnik.swagger.annotations.ApiOperation;
 
+//TODO Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec
+
 @Path("/question")
 @Api(value = "question")
 public final class QuestionService {

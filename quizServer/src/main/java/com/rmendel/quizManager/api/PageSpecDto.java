@@ -51,7 +51,6 @@ public class PageSpecDto implements IApiObject {
 		this.pageOffset = pageOffset;
 	}
 
-	private String objectNotion = null;
 	private String id = null;
 	private Integer rowsPerPage = null;
 	private Integer pageOffset = null;

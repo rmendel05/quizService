@@ -60,7 +60,6 @@ public class FilterSpecDto implements IApiObject {
 		this.maxValue = maxValue;
 	}
 
-	private String objectNotion = null;
 	private String id = null;
 	private String filterType = null;
 	private String minValue = null;
