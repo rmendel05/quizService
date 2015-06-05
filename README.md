@@ -11,7 +11,7 @@ Please note that the service requires Version 1.8 of the Java Runtime Environmen
 
 Then start the service by executing the following command:
 
-  java -jar quizServer-0.0.1-SNAPSHOT.jar
+  java -jar quizServer-0.0-SNAPSHOT-jar-with-dependencies.jar
 
 After starting up the service, open a web browser and navigate to the REST endpoint.  The service is hosted on localhost, port 8080 at this address:
 
