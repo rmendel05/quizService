@@ -6,11 +6,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import com.rmendel.framework.ILoggableResponse;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "questionResponse")
+@JsonIgnoreProperties(ignoreUnknown=true)
 @ApiModel(description="Container for a question service response")
 public final class QuestionResponseDto implements ILoggableResponse {
 
@@ -39,12 +42,12 @@ public final class QuestionResponseDto implements ILoggableResponse {
 	public String getObjectNotion() {
 		return "questionResponse";
 	}
+	public void setObjectNotion() {}
 
 	@ApiModelProperty(value = "Unique identifier for the response", required = true)
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -53,7 +56,6 @@ public final class QuestionResponseDto implements ILoggableResponse {
 	public boolean isSuccess() {
 		return isSuccess;
 	}
-
 	public void setSuccess(boolean isSuccess) {
 		this.isSuccess = isSuccess;
 	}
@@ -62,7 +64,6 @@ public final class QuestionResponseDto implements ILoggableResponse {
 	public String getErrorMessage() {
 		return errorMessage;
 	}
-
 	public void setErrorMessage(String errorMessage) {
 		this.errorMessage = errorMessage;
 	}
@@ -73,7 +74,6 @@ public final class QuestionResponseDto implements ILoggableResponse {
 	public QuestionDto[] getResults() {
 		return results;
 	}
-
 	public void setResults(QuestionDto[] results) {
 		this.results = results;
 	}
@@ -82,7 +82,9 @@ public final class QuestionResponseDto implements ILoggableResponse {
 	public int getRowCount() {
 		return getResults().length;
 	}
+	public void setRowCount() {}
 
+	private String objectNotion = null;
 	private String id = UUID.randomUUID().toString();
 	private boolean isSuccess = false;
 	private String errorMessage = null;

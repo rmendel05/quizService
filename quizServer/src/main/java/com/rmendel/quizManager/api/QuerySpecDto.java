@@ -2,11 +2,14 @@ package com.rmendel.quizManager.api;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import com.rmendel.framework.IApiObject;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "querySpec")
+@JsonIgnoreProperties(ignoreUnknown=true)
 @ApiModel(description="Defines filter, sort and page criteria for returning items from the data cache")
 public class QuerySpecDto implements IApiObject {
 
@@ -23,12 +26,12 @@ public class QuerySpecDto implements IApiObject {
 	public String getObjectNotion() {
 		return "querySpec";
 	}
+	public void setObjectNotion() {}
 
 	@ApiModelProperty(value = "Ignored for this object type", required = false)
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -57,6 +60,7 @@ public class QuerySpecDto implements IApiObject {
 		this.page = page;
 	}
 
+	private String objectNotion = null;
 	private String id = null;
 	private FilterSpecDto filter = null;
 	private SortSpecDto sort = null;

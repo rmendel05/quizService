@@ -1,5 +1,6 @@
 package com.rmendel.quizManager.service;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -80,6 +81,7 @@ public final class QuestionService {
 	    notes = "The inserted question with computed id is returned by this method")	 
 	 @ApiImplicitParams(
 		{@ApiImplicitParam(name = "question", value = "Specifies the properties of the question to be added", required = true, dataType = "QuestionDto", paramType = "body")})
+	 @Consumes(MediaType.APPLICATION_JSON)
 	 @Produces(MediaType.APPLICATION_JSON)
 	 public QuestionResponseDto insert(QuestionDto question) {
 		 
@@ -106,6 +108,7 @@ public final class QuestionService {
 	    notes = "The updated question is returned by this method")	 
 	 @ApiImplicitParams(
 		{@ApiImplicitParam(name = "question", value = "Specifies the properties of the question to be updated", required = true, dataType = "QuestionDto", paramType = "body")})
+	 @Consumes(MediaType.APPLICATION_JSON)
 	 @Produces(MediaType.APPLICATION_JSON)
 	 public QuestionResponseDto update(QuestionDto question) {
 		 

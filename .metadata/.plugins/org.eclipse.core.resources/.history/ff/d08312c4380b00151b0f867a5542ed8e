@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.service;
+
+public class QuizResponseFilter {
+
+	public QuizResponseFilter() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

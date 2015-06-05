@@ -2,11 +2,15 @@ package com.rmendel.quizManager.api;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.rmendel.framework.IApiObject;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "answer")
+@JsonIgnoreProperties(ignoreUnknown=true)
 @ApiModel(description="Describes an option to reply to a question")
 public final class AnswerDto implements IApiObject {
 	
@@ -21,12 +25,12 @@ public final class AnswerDto implements IApiObject {
 	public String getObjectNotion() {
 		return "answer";
 	}
+	public void setObjectNotion() {}
 
 	@ApiModelProperty(value = "Primary key (read-only)", required = false)
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -47,6 +51,7 @@ public final class AnswerDto implements IApiObject {
 		this.questionID = quizQuestionID;
 	}
 
+	private String objectNotion = null;
 	private String id = null;
 	private String responseText = null;
 	private String questionID = null;

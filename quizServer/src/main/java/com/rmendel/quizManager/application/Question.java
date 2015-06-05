@@ -158,23 +158,25 @@ public class Question {
 		return toUpdate;
 	}
 	
-	private static void updateDerivedProperties(QuestionData question) {
+	public static void updateDerivedProperties(QuestionData question) {
 		updateWordCount(question);
 	}
 	
 	private static void updateWordCount(QuestionData question) {
+		String wordSeparator = "\\s";
 		int wordCount = 0;
 		
+		
 		if(!ExpressionUtilities.isTrivial(question.getQuestionText()))
-			wordCount += question.getQuestionText().split(" ").length;
+			wordCount += question.getQuestionText().split(wordSeparator).length;
 		
 		AnswerData AnswerData = question.getAnswer();
 		if(AnswerData != null && !ExpressionUtilities.isTrivial(AnswerData.getResponseText()))
-			wordCount += AnswerData.getResponseText().split(" ").length;
+			wordCount += AnswerData.getResponseText().split(wordSeparator).length;
 
 		for(AnswerData distractor:question.getDistractors())
 			if(!ExpressionUtilities.isTrivial(distractor.getResponseText()))
-				wordCount += distractor.getResponseText().split(" ").length;
+				wordCount += distractor.getResponseText().split(wordSeparator).length;
 		
 		question.setWordCount(wordCount);
 	}

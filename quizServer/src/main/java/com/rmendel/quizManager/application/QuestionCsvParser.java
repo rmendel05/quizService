@@ -30,6 +30,7 @@ public final class QuestionCsvParser extends BaseCsvParser {
 		if(valueCount >= 3) {
 			setDistractors(question, values[2]);
 		}
+		Question.updateDerivedProperties(question);
 		
 		table.putRow(question);
 	}

@@ -2,11 +2,14 @@ package com.rmendel.quizManager.api;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import com.rmendel.framework.IApiObject;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "sortSpec")
+@JsonIgnoreProperties(ignoreUnknown=true)
 @ApiModel(description="Defines the order of items to be returned by a query")
 public class SortSpecDto implements IApiObject {
 
@@ -21,12 +24,12 @@ public class SortSpecDto implements IApiObject {
 	public String getObjectNotion() {
 		return "sortSpec";
 	}
+	public void setObjectNotion() {}
 
 	@ApiModelProperty(value = "Ignored for this object type", required = false)
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -39,6 +42,7 @@ public class SortSpecDto implements IApiObject {
 		this.sortByAttribute = sortByAttribute;
 	}
 
+	private String objectNotion = null;
 	private String id = null;
 	private String sortByAttribute = null;
 }

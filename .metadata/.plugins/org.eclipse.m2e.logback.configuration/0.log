@@ -6512,3 +6512,353 @@ org.eclipse.core.runtime.CoreException: Variable references non-existent resourc
 2015-06-04 22:17:35,127 [Worker-114] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
 2015-06-04 22:17:38,233 [Worker-114] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
 2015-06-04 22:17:38,233 [Worker-114] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 00:02:52,664 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:02:52,665 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:02:52,666 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:02:52,666 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:10:14,195 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:10:14,195 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:10:14,196 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:10:14,197 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:12:08,794 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:12:08,794 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:12:08,795 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:12:08,795 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:12:53,506 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:12:53,506 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:12:53,507 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:12:53,507 [Worker-155] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:14:03,033 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:14:03,033 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:14:03,034 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:14:03,034 [Worker-158] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:17:32,781 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:17:32,781 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:17:32,782 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:17:32,782 [Worker-159] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:27:19,987 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:27:19,988 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:27:19,988 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:27:19,988 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:28:15,851 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:28:15,852 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:28:15,853 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:28:15,853 [Worker-162] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:28:34,612 [Worker-163] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 00:28:34,612 [Worker-163] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 00:31:52,197 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:31:52,197 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:31:52,198 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:31:52,199 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:32:00,408 [Worker-162] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 00:32:00,408 [Worker-162] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 00:41:51,840 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:41:51,841 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:41:51,841 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:41:51,841 [Worker-164] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:42:14,406 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:42:14,407 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:42:14,407 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:42:14,408 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 00:42:23,157 [Worker-169] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 00:42:23,157 [Worker-169] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 00:42:23,433 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:42:23,433 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 00:42:23,444 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 00:42:23,444 [Worker-169] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:02:22,900 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:02:22,900 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 01:02:22,901 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:02:22,901 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:02:29,270 [Worker-178] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 01:02:29,270 [Worker-178] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 01:11:15,463 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:11:15,463 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 01:11:15,464 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:11:15,464 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:11:24,700 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:11:24,700 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 01:11:24,700 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:11:24,701 [Worker-186] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:11:30,462 [Worker-186] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 01:11:30,462 [Worker-186] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 01:38:58,183 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:38:58,185 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 01:38:58,185 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:38:58,186 [Worker-192] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:48:10,702 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:48:10,703 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 01:48:10,704 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:48:10,704 [Worker-199] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:48:34,292 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:48:34,293 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 01:48:34,293 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 01:48:34,293 [Worker-195] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 01:48:39,801 [Worker-201] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 01:48:39,801 [Worker-201] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 02:17:10,884 [Worker-213] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.rmendel:quizServer:0.0.1-SNAPSHOT @ /home/rob/Project/quizService/quizServer/pom.xml.
+2015-06-05 02:17:10,992 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:17:10,992 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 02:17:10,993 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:17:10,993 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 02:17:12,398 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:17:12,398 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 02:17:12,399 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:17:12,399 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 02:17:24,246 [Worker-211] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 02:17:24,246 [Worker-211] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 02:21:12,832 [Worker-215] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.rmendel:quizServer:0.0.1-SNAPSHOT @ /home/rob/Project/quizService/quizServer/pom.xml.
+2015-06-05 02:21:12,944 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:21:12,944 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 02:21:12,945 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:21:12,945 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 02:21:14,339 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:21:14,339 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 02:21:14,339 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:21:14,339 [Worker-215] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 02:21:42,983 [Worker-213] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 02:21:42,983 [Worker-213] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 02:48:52,068 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:48:52,068 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 02:48:52,069 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:48:52,069 [Worker-223] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 02:49:40,677 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:49:40,677 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 02:49:40,678 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 02:49:40,678 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 02:50:20,843 [Worker-223] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 02:50:20,843 [Worker-223] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 03:01:35,453 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:01:35,454 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:01:35,455 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:01:35,455 [Worker-227] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:02:32,318 [Worker-229] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:02:32,318 [Worker-229] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:02:32,319 [Worker-229] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:02:32,320 [Worker-229] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:23:13,862 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:23:13,862 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:23:13,863 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:23:13,863 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:23:42,119 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:23:42,119 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:23:42,120 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:23:42,120 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:24:02,136 [Worker-236] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:24:02,136 [Worker-236] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:24:02,138 [Worker-236] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:24:02,138 [Worker-236] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:24:18,245 [Worker-237] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:24:18,245 [Worker-237] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 03:27:06,132 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:06,132 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:27:06,133 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:06,133 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:27:18,150 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:18,150 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:27:18,151 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:18,151 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:27:34,515 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:34,516 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:27:34,516 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:34,516 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:27:50,168 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:50,168 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:27:50,169 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:50,169 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:27:59,137 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:59,137 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:27:59,139 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:27:59,139 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:28:07,043 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:07,043 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:28:07,044 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:07,044 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:28:20,584 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:20,584 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:28:20,585 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:20,585 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:28:28,760 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:28,760 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:28:28,761 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:28,761 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:28:45,843 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:45,843 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:28:45,843 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:28:45,843 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:29:03,543 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:03,543 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:29:03,544 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:03,544 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:29:10,983 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:10,983 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:29:10,984 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:10,984 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:29:15,621 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:15,621 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:29:15,622 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:15,622 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:29:35,035 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:35,035 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:29:35,037 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:35,037 [Worker-239] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:29:59,434 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:59,434 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:29:59,435 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:29:59,435 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:30:12,832 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:12,832 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:30:12,833 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:12,833 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:30:21,891 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:21,891 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:30:21,892 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:21,892 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:30:27,315 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:27,315 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:30:27,316 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:27,316 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:30:33,171 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:33,171 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:30:33,172 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:33,172 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:30:49,920 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:49,920 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:30:49,922 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:49,922 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:30:56,461 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:56,461 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:30:56,461 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:30:56,462 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:31:31,060 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:31:31,060 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:31:31,061 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:31:31,061 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:31:51,228 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:31:51,228 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:31:51,229 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:31:51,229 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:32:43,127 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:32:43,127 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:32:43,128 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:32:43,128 [Worker-244] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:32:51,398 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:32:51,398 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:32:51,398 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:32:51,399 [Worker-237] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:33:13,266 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:33:13,266 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:33:13,267 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:33:13,267 [Worker-242] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:33:27,365 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:33:27,365 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:33:27,366 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:33:27,366 [Worker-241] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:36:27,758 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:36:27,758 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:36:27,759 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:36:27,759 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:36:37,414 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:36:37,414 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:36:37,415 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:36:37,415 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:36:57,088 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:36:57,088 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:36:57,088 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:36:57,089 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:37:03,239 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:03,239 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:37:03,240 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:03,240 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:37:09,723 [Worker-246] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:09,723 [Worker-246] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:37:09,724 [Worker-246] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:09,724 [Worker-246] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:37:17,393 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:17,393 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:37:17,394 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:17,394 [Worker-243] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:37:24,023 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:24,023 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:37:24,024 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:24,024 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:37:29,334 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:29,334 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:37:29,335 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:37:29,335 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:37:41,677 [Worker-246] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:37:41,677 [Worker-246] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 03:41:15,777 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:41:15,777 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:41:15,778 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:41:15,778 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:41:50,197 [Worker-250] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:41:50,198 [Worker-250] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 03:44:26,949 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:26,950 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:44:26,950 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:26,951 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:44:37,408 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:37,408 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:44:37,409 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:37,409 [Worker-245] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:44:47,500 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:47,500 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:44:47,500 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:47,501 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:44:55,511 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:55,511 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:44:55,512 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:44:55,512 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:45:04,129 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:45:04,129 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:45:04,130 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:45:04,130 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:45:19,310 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:45:19,310 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:45:19,311 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:45:19,311 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:45:28,114 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:45:28,114 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 03:45:28,115 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 03:45:28,115 [Worker-249] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 03:45:59,276 [Worker-248] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:45:59,276 [Worker-248] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 03:49:22,224 [Worker-248] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:49:22,224 [Worker-248] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 03:49:33,336 [Worker-248] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:49:33,337 [Worker-248] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B compile
+2015-06-05 03:49:40,047 [Worker-253] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 03:49:40,047 [Worker-253] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package
+2015-06-05 04:00:48,047 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:00:48,047 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:00:48,047 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:00:48,047 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:00:56,009 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:00:56,009 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:00:56,009 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:00:56,009 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:01:05,315 [Worker-259] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:05,315 [Worker-259] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:01:05,316 [Worker-259] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:05,316 [Worker-259] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:01:14,165 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:14,165 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:01:14,166 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:14,166 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:01:22,733 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:22,733 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:01:22,733 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:22,733 [Worker-250] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:01:30,423 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:30,423 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:01:30,424 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:01:30,424 [Worker-258] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:02:18,717 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:02:18,718 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/main/resources
+2015-06-05 04:02:18,718 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-06-05 04:02:18,718 [Worker-257] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/rob/Project/quizService/quizServer/src/test/resources
+2015-06-05 04:02:21,467 [Worker-257] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 04:02:21,467 [Worker-257] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B compile
+2015-06-05 04:02:27,878 [Worker-256] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/rob/Project/quizService/quizServer
+2015-06-05 04:02:27,878 [Worker-256] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B package

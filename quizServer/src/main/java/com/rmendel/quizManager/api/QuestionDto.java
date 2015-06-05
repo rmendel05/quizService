@@ -4,11 +4,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
 import com.rmendel.framework.IApiObject;
 import com.wordnik.swagger.annotations.ApiModel;
 import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "question")
+@JsonIgnoreProperties(ignoreUnknown=true)
 @ApiModel(description="Specifies the text and possible replies for a question")
 public final class QuestionDto implements IApiObject {
 	
@@ -28,12 +31,12 @@ public final class QuestionDto implements IApiObject {
 	public String getObjectNotion() {
 		return "question";
 	}
+	public void setObjectNotion() {}
 
 	@ApiModelProperty(value = "Primary key (read-only). Required for update only", required = false)
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
@@ -50,7 +53,6 @@ public final class QuestionDto implements IApiObject {
 	public AnswerDto getAnswer() {
 		return answerDto;
 	}
-
 	public void setAnswer(AnswerDto answerDto) {
 		this.answerDto = answerDto;
 	}
@@ -61,7 +63,6 @@ public final class QuestionDto implements IApiObject {
 	public AnswerDto[] getDistractors() {
 		return distractors;
 	}
-
 	public void setDistractors(AnswerDto[] distractors) {
 		this.distractors = distractors;
 	}
@@ -70,11 +71,11 @@ public final class QuestionDto implements IApiObject {
 	public Integer getWordCount() {
 		return wordCount;
 	}
-
 	public void setWordCount(Integer wordCount) {
 		this.wordCount = wordCount;
 	}
 
+	private String objectNotion = null;
 	private String id = null;
 	private String questionText = null;
 	private AnswerDto answerDto = null;
