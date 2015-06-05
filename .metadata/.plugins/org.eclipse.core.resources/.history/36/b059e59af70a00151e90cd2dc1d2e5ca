@@ -1,0 +1,59 @@
+package com.rmendel.quizManager.service;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
+
+import com.rmendel.framework.RMLog;
+import com.rmendel.quizManager.api.*;
+import com.rmendel.quizManager.application.SwaggerInitialization;
+import com.wordnik.swagger.jaxrs.config.BeanConfig;
+
+@ApplicationPath("/api")
+public class SwaggerApplication extends Application {
+	
+	public SwaggerApplication() {
+    	Initialize(
+			"localhost:8080",
+			"/api",
+			"1.0.0",
+			true);
+	}
+	
+	private void Initialize(
+				String host,
+				String basePath,
+				String version,
+				boolean setScan) {
+
+		BeanConfig beanConfig = new BeanConfig();
+		beanConfig.setTitle("Quiz Server");
+        beanConfig.setVersion(version);
+        beanConfig.setSchemes(new String[]{"http"});
+        beanConfig.setHost(host);
+        beanConfig.setBasePath(basePath);
+        beanConfig.setResourcePackage("io.swagger.resources,com.wordnik.swagger.jaxrs.json,com.wordnik.swagger.jaxrs.listing,com.rmendel.quizManager.service,com.rmendel.quizManager.api,com.rmendel.framework");
+        beanConfig.setScan(setScan);
+	}
+
+	@Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> resources = new HashSet();
+
+        resources.add(QuestionService.class);
+        resources.add(AnswerDto.class);
+        resources.add(FilterSpecDto.class);
+        resources.add(PageSpecDto.class);
+        resources.add(QuerySpecDto.class);
+        resources.add(QuestionDto.class);
+        resources.add(QuestionResponseDto.class);
+        resources.add(SortSpecDto.class);
+
+        resources.add(com.wordnik.swagger.jaxrs.listing.ApiListingResource.class);
+        resources.add(com.wordnik.swagger.jaxrs.listing.SwaggerSerializers.class);
+
+        return resources;
+    }
+}

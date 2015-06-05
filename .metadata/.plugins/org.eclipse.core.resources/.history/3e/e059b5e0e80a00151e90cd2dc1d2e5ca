@@ -1,0 +1,39 @@
+package com.rmendel.quizManager.service;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.ws.rs.core.Application;
+
+import com.rmendel.quizManager.api.*;
+import com.rmendel.quizManager.application.SwaggerInitialization;
+
+public class SwaggerApplication extends Application {
+	
+	public SwaggerApplication() {
+    	new SwaggerInitialization(
+    			"localhost:8080",
+    			"/api",
+    			"1.0.0",
+    			true);
+	}
+
+	@Override
+    public Set<Class<?>> getClasses() {
+        Set<Class<?>> resources = new HashSet();
+
+        resources.add(QuestionService.class);
+        resources.add(AnswerDto.class);
+        resources.add(FilterSpecDto.class);
+        resources.add(PageSpecDto.class);
+        resources.add(QuerySpecDto.class);
+        resources.add(QuestionDto.class);
+        resources.add(QuestionResponseDto.class);
+        resources.add(SortSpecDto.class);
+
+        resources.add(com.wordnik.swagger.jaxrs.listing.ApiListingResource.class);
+        resources.add(com.wordnik.swagger.jaxrs.listing.SwaggerSerializers.class);
+
+        return resources;
+    }
+}

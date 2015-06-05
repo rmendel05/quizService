@@ -5,8 +5,11 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.rmendel.framework.IApiObject;
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "question")
+@ApiModel(description="Specifies the text and possible replies for a question")
 public final class QuestionDto implements IApiObject {
 	
 	public QuestionDto() {
@@ -21,10 +24,12 @@ public final class QuestionDto implements IApiObject {
 		this.distractors = distractors;
 	}
 
+	@ApiModelProperty(value = "The object type (read-only)", required = false)
 	public String getObjectNotion() {
 		return "question";
 	}
 
+	@ApiModelProperty(value = "Primary key (read-only). Required for update only", required = false)
 	public String getId() {
 		return id;
 	}
@@ -33,12 +38,15 @@ public final class QuestionDto implements IApiObject {
 		this.id = id;
 	}
 
+	@ApiModelProperty(value = "Iterogative statement defining the question", required = true)
 	public String getQuestionText() {
 		return questionText;
 	}
 	public void setQuestionText(String questionText) {
 		this.questionText = questionText;
 	}
+	
+	@ApiModelProperty(value = "The correct response option", required = true)
 	public AnswerDto getAnswer() {
 		return answerDto;
 	}
@@ -49,6 +57,7 @@ public final class QuestionDto implements IApiObject {
 
 	@XmlElementWrapper(name = "distractors")
 	@XmlElement(name = "distractor")
+	@ApiModelProperty(value = "Array of incorrect answers", required = false)
 	public AnswerDto[] getDistractors() {
 		return distractors;
 	}
@@ -57,6 +66,7 @@ public final class QuestionDto implements IApiObject {
 		this.distractors = distractors;
 	}
 
+	@ApiModelProperty(value = "Number of words in the questionText, answer and distractors combined (read-only)", required = false)
 	public Integer getWordCount() {
 		return wordCount;
 	}

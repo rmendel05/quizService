@@ -3,8 +3,11 @@ package com.rmendel.quizManager.api;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.rmendel.framework.IApiObject;
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "answer")
+@ApiModel(description="Describes an option to reply to a question")
 public final class AnswerDto implements IApiObject {
 	
 	public AnswerDto() {
@@ -14,10 +17,12 @@ public final class AnswerDto implements IApiObject {
 		this.responseText = responseText;
 	}
 
+	@ApiModelProperty(value = "The object type (read-only)", required = false)
 	public String getObjectNotion() {
 		return "answer";
 	}
 
+	@ApiModelProperty(value = "Primary key (read-only)", required = false)
 	public String getId() {
 		return id;
 	}
@@ -26,6 +31,7 @@ public final class AnswerDto implements IApiObject {
 		this.id = id;
 	}
 
+	@ApiModelProperty(value = "A statement of reply for the associated question", required = true)
 	public String getResponseText() {
 		return responseText;
 	}
@@ -33,6 +39,7 @@ public final class AnswerDto implements IApiObject {
 		responseText = value;  
 	}
 
+	@ApiModelProperty(value = "Unique identifier of the associated question (read-only)", required = false)
 	public String getQuestionID() {
 		return questionID;
 	}

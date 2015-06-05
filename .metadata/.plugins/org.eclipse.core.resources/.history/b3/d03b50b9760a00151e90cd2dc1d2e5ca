@@ -1,0 +1,9 @@
+package com.rmendel.quizManager.application;
+
+public final class SwaggerInitialization {
+
+	public SwaggerInitialization() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

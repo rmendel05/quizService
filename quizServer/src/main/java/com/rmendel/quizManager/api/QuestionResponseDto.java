@@ -7,9 +7,15 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.rmendel.framework.ILoggableResponse;
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "questionResponse")
+@ApiModel(description="Container for a question service response")
 public final class QuestionResponseDto implements ILoggableResponse {
+
+	public QuestionResponseDto() {
+	}
 
 	public QuestionResponseDto(
 			boolean isSuccess,
@@ -29,10 +35,12 @@ public final class QuestionResponseDto implements ILoggableResponse {
 		errorMessage = e.getMessage();
 	}
 
+	@ApiModelProperty(value = "The object type (read-only)", required = false)
 	public String getObjectNotion() {
 		return "questionResponse";
 	}
 
+	@ApiModelProperty(value = "Unique identifier for the response", required = true)
 	public String getId() {
 		return id;
 	}
@@ -41,6 +49,7 @@ public final class QuestionResponseDto implements ILoggableResponse {
 		this.id = id;
 	}
 
+	@ApiModelProperty(value = "True of the service method completed successfully", required = true)
 	public boolean isSuccess() {
 		return isSuccess;
 	}
@@ -49,6 +58,7 @@ public final class QuestionResponseDto implements ILoggableResponse {
 		this.isSuccess = isSuccess;
 	}
 
+	@ApiModelProperty(value = "Describes any errors that occurred during service method execution", required = false)
 	public String getErrorMessage() {
 		return errorMessage;
 	}
@@ -59,6 +69,7 @@ public final class QuestionResponseDto implements ILoggableResponse {
 
 	@XmlElementWrapper(name = "results")
 	@XmlElement(name = "result")
+	@ApiModelProperty(value = "List of zero or more items returned by a service method", required = true)
 	public QuestionDto[] getResults() {
 		return results;
 	}
@@ -67,6 +78,7 @@ public final class QuestionResponseDto implements ILoggableResponse {
 		this.results = results;
 	}
 
+	@ApiModelProperty(value = "Number of elements in the results array", required = true)
 	public int getRowCount() {
 		return getResults().length;
 	}

@@ -1,0 +1,14 @@
+package com.rmendel.quizManager.application;
+
+import com.wordnik.swagger.jaxrs.config.BeanConfig;
+
+public final class SwaggerInitialization {
+
+	public SwaggerInitialization() {
+		BeanConfig beanConfig = new BeanConfig();
+        beanConfig.setVersion("1.0.0");
+        beanConfig.setBasePath("http://localhost:8080/question");
+        beanConfig.setResourcePackage("io.swagger.resources");
+        beanConfig.setScan(true);	
+    }
+}

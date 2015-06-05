@@ -1,0 +1,28 @@
+package com.rmendel.quizManager.application;
+
+import com.wordnik.swagger.jaxrs.config.BeanConfig;
+
+public final class SwaggerInitialization {
+
+	public SwaggerInitialization(
+			String host,
+			String basePath,
+			String version,
+			boolean setScan) {
+		BeanConfig beanConfig = new BeanConfig();
+        beanConfig.setVersion(version);
+        beanConfig.setSchemes(new String[]{"http"});
+        beanConfig.setHost(host);
+        beanConfig.setBasePath(basePath);
+        beanConfig.setResourcePackage("io.swagger.resources");
+        beanConfig.setScan(setScan);
+		
+		
+		BeanConfig beanConfig = new BeanConfig();
+        beanConfig.setVersion(version);
+        beanConfig.setBasePath(basePath);
+        beanConfig.setSchemes(new String[]{"http"});
+        beanConfig.setResourcePackage("io.swagger.resources");
+        beanConfig.setScan(setScan);	
+    }
+}

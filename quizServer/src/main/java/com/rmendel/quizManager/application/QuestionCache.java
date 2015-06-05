@@ -1,7 +1,6 @@
 package com.rmendel.quizManager.application;
 
 import com.rmendel.framework.CsvReader;
-import com.rmendel.framework.RMLog;
 import com.rmendel.framework.TaskLogEntry;
 
 public class QuestionCache {

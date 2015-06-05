@@ -247,3 +247,97 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.ui.browser 2 0 2015-06-03 12:13:52.115
 !MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:25.516
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:25.564
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:25.611
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:52.482
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:52.483
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:52.483
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:52.594
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:52.600
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:52.601
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:59.282
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:59.282
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:59.283
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:59.421
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:59.421
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 12:49:59.422
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:20.072
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:20.072
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:20.073
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:21.657
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:21.657
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:21.658
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:58.988
+!MESSAGE The POM for com.sun.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:58.988
+!MESSAGE The POM for com.sun.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:06:58.989
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:10:41.413
+!MESSAGE The POM for org.glassfish.jersey:jersey-core:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:10:41.458
+!MESSAGE The POM for org.glassfish.jersey:jersey-json:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:10:41.528
+!MESSAGE The POM for org.glassfish.jersey:jersey-servlet:jar:2.17 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2015-06-04 13:23:18.678
+!MESSAGE The POM for com.sun.jersey:jersey-servlet:jar:1.8 is missing, no dependency information available
+!SESSION 2015-06-04 17:06:09.629 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui.browser 2 0 2015-06-04 17:06:22.020
+!MESSAGE Internal browser is not available: No more handles [Unknown Mozilla path (MOZILLA_FIVE_HOME not set)]

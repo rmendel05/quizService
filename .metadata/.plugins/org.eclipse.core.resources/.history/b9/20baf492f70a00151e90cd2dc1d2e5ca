@@ -1,0 +1,30 @@
+package com.rmendel.quizManager.application;
+
+import com.wordnik.swagger.config.ScannerFactory;
+import com.wordnik.swagger.jaxrs.config.BeanConfig;
+import com.wordnik.swagger.jaxrs.config.ReflectiveJaxrsScanner;
+import com.wordnik.swagger.models.Info;
+
+public final class SwaggerInitialization {
+
+	public SwaggerInitialization(
+			String host,
+			String basePath,
+			String version,
+			boolean setScan) {
+		BeanConfig beanConfig = new BeanConfig();
+		beanConfig.setTitle("Quiz Server");
+        beanConfig.setVersion(version);
+        beanConfig.setSchemes(new String[]{"http"});
+        beanConfig.setHost(host);
+        beanConfig.setBasePath(basePath);
+        beanConfig.setResourcePackage("io.swagger.resources,com.wordnik.swagger.jaxrs.json,com.wordnik.swagger.jaxrs.listing,com.rmendel.quizManager.service,com.rmendel.quizManager.api,com.rmendel.framework");
+        beanConfig.setScan(setScan);
+        
+//        ReflectiveJaxrsScanner scanner = new ReflectiveJaxrsScanner();
+//        scanner.setResourcePackage("com.wordnik.swagger.sample.resource");
+//        ScannerFactory.setScanner(scanner);
+//        Info info = new Info()
+//          .title("Quiz Server");
+    }
+}

@@ -3,8 +3,11 @@ package com.rmendel.quizManager.api;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.rmendel.framework.IApiObject;
+import com.wordnik.swagger.annotations.ApiModel;
+import com.wordnik.swagger.annotations.ApiModelProperty;
 
 @XmlRootElement(name = "filterSpec")
+@ApiModel(description="Defines a logical rule for selecting items to be returned by a query")
 public class FilterSpecDto implements IApiObject {
 
 	public FilterSpecDto() {
@@ -16,10 +19,12 @@ public class FilterSpecDto implements IApiObject {
 		this.maxValue = maxValue;
 	}
 
+	@ApiModelProperty(value = "The object type (read-only)", required = false)
 	public String getObjectNotion() {
 		return "filterSpec";
 	}
 
+	@ApiModelProperty(value = "Primary key (read-only)", required = false)
 	public String getId() {
 		return id;
 	}
@@ -28,6 +33,7 @@ public class FilterSpecDto implements IApiObject {
 		this.id = id;
 	}
 
+	@ApiModelProperty(value = "Type of filter being specified", required = true, allowableValues = "wordCount,distractorCount")
 	public String getFilterType() {
 		return filterType;
 	}
@@ -35,6 +41,7 @@ public class FilterSpecDto implements IApiObject {
 		this.filterType = filterType;
 	}
 
+	@ApiModelProperty(value = "Low inclusive value for specifying a range of integers", required = false)
 	public String getMinValue() {
 		return minValue;
 	}
@@ -43,6 +50,7 @@ public class FilterSpecDto implements IApiObject {
 		this.minValue = minValue;
 	}
 
+	@ApiModelProperty(value = "High inclusive value for specifying a range of integers", required = false)
 	public String getMaxValue() {
 		return maxValue;
 	}

@@ -1,8 +1,0 @@
-package com.rmendel.quizManager.application;
-
-public class Question {
-
-	public Question() {
-	}
-
-}
