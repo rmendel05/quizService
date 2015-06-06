@@ -290,6 +290,8 @@ Response:
 
 <a id="Insert-a-Question"></a>
 ###Insert a Question 
+          |                                                                   |
+----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/insert
 Method|POST
 Headers|Content-Type: application/json
