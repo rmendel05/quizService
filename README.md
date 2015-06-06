@@ -1,7 +1,21 @@
 # quizService
 ##A RESTful service for creating, updating and querying quiz questions
 
-[Codebase]()
+####Contents
+[Installation](#Installation)
+[Codebase](#Codebase)
+[Testing the Service](#Testing-the-Service)
+  [Lookup a Single Question by Internal ID](#Lookup-a-Single-Question-by-Internal-ID)
+  [Query by Distractor Count](#Query-by-Distractor-Count)
+  [Query by Word Count](#Query-by-Word-Count)
+  [Query for All Questions](#Query-for-All-Questions)
+  [Insert a Question](#Insert-a-Question)
+  [Update a Question](#Update-a-Question)
+  [Erroneous Update](#Erroneous-Update)
+[Things to Improve](#Things-to-Improve)
+[Further Documentation](#Further-Documentation)
+
+##Installation <a id="Installation"></a>
 
 To install the service, download and place the contents of the following target folder to an empty folder on your local machine.  
 
@@ -27,7 +41,7 @@ http://localhost:8080/api/question/getObject/1
 
 Please see the section on Further Documentation below for a convenient way to explore the API using Swagger.
 
-##Codebase ## 
+##Codebase <a id="Codebase"></a>
 When reviewing the code, it might help to look at the following areas first:
 
 Endpoint definition: https://github.com/rmendel05/quizService/blob/master/quizServer/src/main/java/com/rmendel/quizManager/service/QuestionService.java
@@ -36,10 +50,10 @@ API Data Transfer Objects (DTOs): https://github.com/rmendel05/quizService/tree/
 
 In addition, unit tests can be found in the following location: https://github.com/rmendel05/quizService/tree/master/quizServer/src/test/java/com/rmendel
 
-##Testing the Service  
+##Testing the Service <a id="Testing-the-Service"></a> 
 To test the service, you can use a tool such as Postman, a Google Chrome browser plugin.  Here are some examples of calls to the methods:
 
-###Lookup a Single Question by Internal ID
+###Lookup a Single Question by Internal ID <a id="Lookup-a-Single-Question-by-Internal-ID"></a>
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/getObject/25
@@ -84,7 +98,7 @@ Response:
 }
 ```
 
-###Query by Distractor Count
+###Query by Distractor Count <a id="Query-by-Distractor-Count"></a>
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
@@ -174,7 +188,7 @@ Response:
 }
 ```
 
-###Query by Word Count
+###Query by Word Count <a id="Query-by-Word-Count"></a>
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
@@ -251,7 +265,7 @@ Response:
 }
 ```
 
-###Query for All Questions
+###Query for All Questions <a id="Query-for-All-Questions"></a>
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
@@ -267,7 +281,7 @@ Response:
 [A JSON collection of all questions is returned.]
 ```
 
-###Insert a Question
+###Insert a Question <a id="Insert-a-Question"></a>
 Url|http://localhost:8080/api/question/insert
 Method|POST
 Headers|Content-Type: application/json
@@ -337,7 +351,7 @@ Response:
 ```
 Note the id of 4000 for the new question is returned above.  In addition, a unique id of the response for       tracking and logging purposes is also returned.
 
-###Update a Question
+###Update a Question <a id="Update-a-Question"></a>
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/update
@@ -411,7 +425,7 @@ Response:
 }
 ```
 
-###Erroneous Update
+###Erroneous Update <a id="Erroneous-Update"></a>
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/update
@@ -451,18 +465,7 @@ Response:
 }
 ```
 
-##Further Documentation
-Descriptions of objects and properties can be found by looking at the source code classes found here
-
-https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api
-
-The Java classes and their properties are marked with @ApiModel and @ApiModelProperty annotations containing notes about each element.  This application produces swagger.json documents based on these annotations.  Once you have the Quiz Service running as specified above, you can explore this documentation in a browser from this link:
-
-http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.json#!/question
-
-Please note that the Swagger site above will also allow execution of GET methods.  However, this will not support POST methods because they require the ```Content-Type: application/json``` header to be specified.
-
-##Things to Improve
+##Things to Improve <a id="Things-to-Improve"></a>
 * Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec.  Add better error messages in responses for these cases.
 * Return an indication of whether the specified page is the last one containing data
 * Add more business rules to enforce data integrity, such as required values and uniqueness constraints
@@ -477,3 +480,14 @@ Please note that the Swagger site above will also allow execution of GET methods
 * Test Question table and business objects more directly
 * Use generics to convert between server objects and DTOs
 * Add class hierarchy to support logging plugins.
+
+##Further Documentation <a id="Further-Documentation"></a>
+Descriptions of objects and properties can be found by looking at the source code classes found here
+
+https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api
+
+The Java classes and their properties are marked with @ApiModel and @ApiModelProperty annotations containing notes about each element.  This application produces swagger.json documents based on these annotations.  Once you have the Quiz Service running as specified above, you can explore this documentation in a browser from this link:
+
+http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.json#!/question
+
+Please note that the Swagger site above will also allow execution of GET methods.  However, this will not support POST methods because they require the ```Content-Type: application/json``` header to be specified.
