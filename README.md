@@ -461,7 +461,7 @@ http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.js
 Please note that the Swagger site above will also allow execution of GET methods.  However, this will not support POST methods because they require the ```Content-Type: application/json``` header to be specified.
 
 ##Things to Improve
-* Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec
+* Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec.  Add better error messages in responses for these cases.
 * Return an indication of whether the specified page is the last one containing data
 * Add more business rules to enforce data integrity, such as required values and uniqueness constraints
 * Add more ways to filter
