@@ -36,7 +36,9 @@ To test the service, you can use a tool such as Postman, a Google Chrome browser
 ###Lookup a Single Question by Internal ID
 Url: http://localhost:8080/api/question/getObject/25
 Method: GET
+
 Response:
+```JSON
 {
   "results": [
       {
@@ -72,8 +74,9 @@ Response:
   "rowCount": 1,
   "id": "b7d741a2-3751-4e96-bf67-0a896745e7c0"
 }
+```
 
-Query by Distractor Count
+###Query by Distractor Count
 Url: http://localhost:8080/api/question/query
 Method: POST
 Headers:  Content-Type: application/json
@@ -95,6 +98,7 @@ Body:
 Note that the Content-Type header is required for all POST methods.
 }
 ```
+
 Response:
 ```JSON
 {
@@ -181,6 +185,7 @@ Body:
 }
 }
 ```
+
 Response:
 ```
 {
@@ -336,11 +341,12 @@ Body:
 "answer": {
   "responseText": "Neil Armstrong"
 }
+}
 ```
 Note that the id (4000) of the question (but not answers or distractors) is required in the update above.
-```JSON
-}
+
 Response:
+```JSON
 {
   "results": [
       {
