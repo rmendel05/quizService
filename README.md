@@ -2,18 +2,18 @@
 ##A RESTful service for creating, updating and querying quiz questions
 
 ####Contents
-[Installation](#Installation)
-[Codebase](#Codebase)
-[Testing the Service](#Testing-the-Service)
-  [Lookup a Single Question by Internal ID](#Lookup-a-Single-Question-by-Internal-ID)
-  [Query by Distractor Count](#Query-by-Distractor-Count)
-  [Query by Word Count](#Query-by-Word-Count)
-  [Query for All Questions](#Query-for-All-Questions)
-  [Insert a Question](#Insert-a-Question)
-  [Update a Question](#Update-a-Question)
-  [Erroneous Update](#Erroneous-Update)
-[Things to Improve](#Things-to-Improve)
-[Further Documentation](#Further-Documentation)
++ [Installation](#Installation)
++ [Codebase](#Codebase)
++ [Testing the Service](#Testing-the-Service)
+  - [Lookup a Single Question by Internal ID](#Lookup-a-Single-Question-by-Internal-ID)
+  - [Query by Distractor Count](#Query-by-Distractor-Count)
+  - [Query by Word Count](#Query-by-Word-Count)
+  - [Query for All Questions](#Query-for-All-Questions)
+  - [Insert a Question](#Insert-a-Question)
+  - [Update a Question](#Update-a-Question)
+  - [Erroneous Update](#Erroneous-Update)
++ [Things to Improve](#Things-to-Improve)
++ [Further Documentation](#Further-Documentation)
 
 ##Installation <a id="Installation"></a>
 
