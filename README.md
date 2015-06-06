@@ -79,6 +79,8 @@ Response:
 ```
 
 ###Query by Distractor Count
+          |                                                                   |
+----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
 Method|POST
 Headers|Content-Type: application/json
@@ -97,9 +99,9 @@ Body:
   "rowsPerPage": 2,
   "pageOffset": 2
 }
-Note that the Content-Type header is required for all POST methods.
 }
 ```
+Note that the Content-Type header is required for all POST methods.
 
 Response:
 ```JSON
@@ -167,9 +169,11 @@ Response:
 ```
 
 ###Query by Word Count
-Url: http://localhost:8080/api/question/query
-Method: POST
-Headers:  Content-Type: application/json
+          |                                                                   |
+----------|-------------------------------------------------------------------
+Url|http://localhost:8080/api/question/query
+Method|POST
+Headers|Content-Type: application/json
 Body:
 ```JSON
 {
@@ -242,17 +246,25 @@ Response:
 ```
 
 ###Query for All Questions
-Url: http://localhost:8080/api/question/query
-Method: POST
-Headers:  Content-Type: application/json
-Body: { }
+          |                                                                   |
+----------|-------------------------------------------------------------------
+Url|http://localhost:8080/api/question/query
+Method|POST
+Headers|Content-Type: application/json
+Body:
+```JSON
+{ }
+```
+
 Response:
+```
 [A JSON collection of all questions is returned.]
+```
 
 ###Insert a Question
-Url: http://localhost:8080/api/question/insert
-Method: POST
-Headers:  Content-Type: application/json
+Url|http://localhost:8080/api/question/insert
+Method|POST
+Headers|Content-Type: application/json
 Body:
 ```JSON
 {
@@ -317,13 +329,14 @@ Response:
   "id": "2d0e0d30-59ff-409e-a523-161918d4adf0"
 }
 ```
-
 Note the id of 4000 for the new question is returned above.  In addition, a unique id of the response for       tracking and logging purposes is also returned.
 
 ###Update a Question
-Url: http://localhost:8080/api/question/update
-Method: POST
-Headers:  Content-Type: application/json
+          |                                                                   |
+----------|-------------------------------------------------------------------
+Url|http://localhost:8080/api/question/update
+Method|POST
+Headers|Content-Type: application/json
 Body:
 ```JSON
 {
@@ -393,9 +406,11 @@ Response:
 ```
 
 ###Erroneous Update
-Url: http://localhost:8080/api/question/update
-Method: POST
-Headers:  Content-Type: application/json
+          |                                                                   |
+----------|-------------------------------------------------------------------
+Url|http://localhost:8080/api/question/update
+Method|POST
+Headers|Content-Type: application/json
 Body:
 ```
 {
