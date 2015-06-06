@@ -455,3 +455,19 @@ The Java classes and their properties are marked with @ApiModel and @ApiModelPro
 http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.json#!/question
 
 Please note that the Swagger site above will also allow execution of GET methods.  However, this will not support POST methods because they require the ```Content-Type: application/json``` header to be specified.
+
+##Things to Improve
+* Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec
+* Return an indication of whether the specified page is the last one containing data
+* Add more business rules to enforce data integrity, such as required values and uniqueness constraints
+* Add more ways to filter
+* Add more ways to sort
+* Add more query tests
+* Create indexes for supported search keys and key words
+* Synchronize access to table data
+* Move QuestionTable cache to a real database
+* For distractor updates, support merging of existing items with new items by id
+* Handle quoted separators in CSV parser
+* Test Question table and business objects more directly
+* Use generics to convert between server objects and DTOs
+* Add class hierarchy to support logging plugins.
