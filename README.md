@@ -24,7 +24,7 @@ For example, to query the question having object id=1, navigate to:
 http://localhost:8080/api/question/getObject/1
 
 ##Codebase  
-When reviewing the code, it might be helpful to look at the following areas first:
+When reviewing the code, it might help to look at the following areas first:
 
 Endpoint definition: https://github.com/rmendel05/quizService/blob/master/quizServer/src/main/java/com/rmendel/quizManager/service/QuestionService.java
 
