@@ -1,7 +1,7 @@
 # quizService
 ##A RESTful service for creating, updating and querying quiz questions
 
-[Codebase]
+[Codebase][]
 
 To install the service, download and place the contents of the following target folder to an empty folder on your local machine.  
 
@@ -27,7 +27,7 @@ http://localhost:8080/api/question/getObject/1
 
 Please see the section on Further Documentation below for a convenient way to explore the API using Swagger.
 
-##Codebase  
+##Codebase ## 
 When reviewing the code, it might help to look at the following areas first:
 
 Endpoint definition: https://github.com/rmendel05/quizService/blob/master/quizServer/src/main/java/com/rmendel/quizManager/service/QuestionService.java
