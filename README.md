@@ -34,7 +34,7 @@ API Data Transfer Objects (DTOs): https://github.com/rmendel05/quizService/tree/
 To test the service, you can use a tool such as Postman, a Google Chrome browser plugin.  Here are some examples of calls to the methods:
 
 ###Lookup a Single Question by Internal ID
-          |                                                                   
+          |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/getObject/25
 Method|GET
