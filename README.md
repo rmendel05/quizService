@@ -23,6 +23,8 @@ For example, to query the question having object id=1, navigate to:
 
 http://localhost:8080/api/question/getObject/1
 
+Please see the section on Further Documentation below for a convenient way to explore the API using Swagger.
+
 ##Codebase  
 When reviewing the code, it might help to look at the following areas first:
 
