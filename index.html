@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="quizService : A RESTful service for creating, updating and querying quiz questions">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>quizService</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rmendel05/quizService">View on GitHub</a>
+
+          <h1 id="project_title">quizService</h1>
+          <h2 id="project_tagline">A RESTful service for creating, updating and querying quiz questions</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/rmendel05/quizService/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/rmendel05/quizService/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="quizservice" class="anchor" href="#quizservice" aria-hidden="true"><span class="octicon octicon-link"></span></a>quizService</h1>
+
+<h2>
+<a id="a-restful-service-for-creating-updating-and-querying-quiz-questions" class="anchor" href="#a-restful-service-for-creating-updating-and-querying-quiz-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>A RESTful service for creating, updating and querying quiz questions</h2>
+
+<h4>
+<a id="contents" class="anchor" href="#contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contents</h4>
+
+<ul>
+<li><a href="#Installation">Installation</a></li>
+<li><a href="#Codebase">Codebase</a></li>
+<li>
+<a href="#Testing-the-Service">Testing the Service</a>
+
+<ul>
+<li><a href="#Lookup-a-Single-Question-by-Internal-ID">Lookup a Single Question by Internal ID</a></li>
+<li><a href="#Query-by-Distractor-Count">Query by Distractor Count</a></li>
+<li><a href="#Query-by-Word-Count">Query by Word Count</a></li>
+<li><a href="#Query-for-All-Questions">Query for All Questions</a></li>
+<li><a href="#Insert-a-Question">Insert a Question</a></li>
+<li><a href="#Update-a-Question">Update a Question</a></li>
+<li><a href="#Erroneous-Update">Erroneous Update</a></li>
+</ul>
+</li>
+<li><a href="#Things-to-Improve">Things to Improve</a></li>
+<li><a href="#Further-Documentation">Further Documentation</a></li>
+</ul>
+
+<p><a id="Installation"></a></p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To install the service, download and place the contents of the following target folder to an empty folder on your local machine.  </p>
+
+<p><a href="https://github.com/rmendel05/quizService/tree/master/quizServer/target">https://github.com/rmendel05/quizService/tree/master/quizServer/target</a></p>
+
+<p>Please note that the service requires Version 1.8 of the Java Runtime Environment.  Make sure your local folder contains a file called QuestionData.csv.  This file contains all the questions to be loaded during service startup and should be in the following format:</p>
+
+<p>question|answer|distractor1,distractor2,..,distractorN</p>
+
+<p>Then start the service by executing the following command:</p>
+
+<pre><code>java -jar quizServer-0.0-SNAPSHOT-jar-with-dependencies.jar
+</code></pre>
+
+<p>After starting up the service, open a web browser and navigate to the REST endpoint.  The service is hosted on localhost, port 8080 at this address:</p>
+
+<p>http://localhost:8080/api/question</p>
+
+<p>For example, to query the question having object id=1, navigate to:</p>
+
+<p>http://localhost:8080/api/question/getObject/1</p>
+
+<p>Please see the section on Further Documentation below for a convenient way to explore the API using Swagger.</p>
+
+<p><a id="Codebase"></a></p>
+
+<h2>
+<a id="codebase" class="anchor" href="#codebase" aria-hidden="true"><span class="octicon octicon-link"></span></a>Codebase</h2>
+
+<p>When reviewing the code, it might help to look at the following areas first:</p>
+
+<p>Endpoint definition: <a href="https://github.com/rmendel05/quizService/blob/master/quizServer/src/main/java/com/rmendel/quizManager/service/QuestionService.java">https://github.com/rmendel05/quizService/blob/master/quizServer/src/main/java/com/rmendel/quizManager/service/QuestionService.java</a></p>
+
+<p>API Data Transfer Objects (DTOs): <a href="https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api">https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api</a></p>
+
+<p>In addition, unit tests can be found in the following location: <a href="https://github.com/rmendel05/quizService/tree/master/quizServer/src/test/java/com/rmendel">https://github.com/rmendel05/quizService/tree/master/quizServer/src/test/java/com/rmendel</a></p>
+
+<p><a id="Testing-the-Service"></a> </p>
+
+<h2>
+<a id="testing-the-service" class="anchor" href="#testing-the-service" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing the Service</h2>
+
+<p>To test the service, you can use a tool such as Postman, a Google Chrome browser plugin.  Here are some examples of calls to the methods:</p>
+
+<p><a id="Lookup-a-Single-Question-by-Internal-ID"></a></p>
+
+<h3>
+<a id="lookup-a-single-question-by-internal-id" class="anchor" href="#lookup-a-single-question-by-internal-id" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lookup a Single Question by Internal ID</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>http://localhost:8080/api/question/getObject/25</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>GET</td>
+</tr>
+</tbody>
+</table>
+
+<p>Response:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>results<span class="pl-pds">"</span></span>: [
+      {
+          <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>question<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>What is 812 * 2069?<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+              <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>1680028<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>25<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>84<span class="pl-pds">"</span></span>
+          },
+          <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>: <span class="pl-c1">9</span>,
+          <span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>6397<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>25<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>85<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span> 85<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>25<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>86<span class="pl-pds">"</span></span>
+              }
+          ],
+          <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>25<span class="pl-pds">"</span></span>
+      }
+  ],
+  <span class="pl-s"><span class="pl-pds">"</span>errorMessage<span class="pl-pds">"</span></span>: <span class="pl-c1">null</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>questionResponse<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>success<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>rowCount<span class="pl-pds">"</span></span>: <span class="pl-c1">1</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>b7d741a2-3751-4e96-bf67-0a896745e7c0<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p><a id="Query-by-Distractor-Count"></a></p>
+
+<h3>
+<a id="query-by-distractor-count" class="anchor" href="#query-by-distractor-count" aria-hidden="true"><span class="octicon octicon-link"></span></a>Query by Distractor Count</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>http://localhost:8080/api/question/query</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>Content-Type: application/json</td>
+</tr>
+</tbody>
+</table>
+
+<p>Body:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+<span class="pl-s"><span class="pl-pds">"</span>filter<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>filterType<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>distractorCount<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>minValue<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>maxValue<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>
+},
+<span class="pl-s"><span class="pl-pds">"</span>sort<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>sortByAttribute<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>
+},
+<span class="pl-s"><span class="pl-pds">"</span>page<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>rowsPerPage<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>pageOffset<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>
+}
+}</pre></div>
+
+<p>Note that the Content-Type header is required for all POST methods.</p>
+
+<p>Response:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>results<span class="pl-pds">"</span></span>: [
+      {
+          <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>question<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>What is 2368 * 5998?<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+              <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>14203264<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3631<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>12673<span class="pl-pds">"</span></span>
+          },
+          <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>: <span class="pl-c1">9</span>,
+          <span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>5456<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3631<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>12674<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span> 4930<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3631<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>12675<span class="pl-pds">"</span></span>
+              }
+          ],
+          <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3631<span class="pl-pds">"</span></span>
+      },
+      {
+          <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>question<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>What is 3804 - 5903?<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+              <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>-2099<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3632<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>12676<span class="pl-pds">"</span></span>
+          },
+          <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>: <span class="pl-c1">9</span>,
+          <span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>9208<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3632<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>12677<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span> 8868<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3632<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>12678<span class="pl-pds">"</span></span>
+              }
+          ],
+          <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>3632<span class="pl-pds">"</span></span>
+      }
+  ],
+  <span class="pl-s"><span class="pl-pds">"</span>errorMessage<span class="pl-pds">"</span></span>: <span class="pl-c1">null</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>questionResponse<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>success<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>rowCount<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>81eaf89a-9d20-4e9d-ba30-b88340c66ce1<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p><a id="Query-by-Word-Count"></a></p>
+
+<h3>
+<a id="query-by-word-count" class="anchor" href="#query-by-word-count" aria-hidden="true"><span class="octicon octicon-link"></span></a>Query by Word Count</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>http://localhost:8080/api/question/query</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>Content-Type: application/json</td>
+</tr>
+</tbody>
+</table>
+
+<p>Body:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+<span class="pl-s"><span class="pl-pds">"</span>filter<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>filterType<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>minValue<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>maxValue<span class="pl-pds">"</span></span>: <span class="pl-c1">10</span>
+},
+<span class="pl-s"><span class="pl-pds">"</span>sort<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>sortByAttribute<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>
+},
+<span class="pl-s"><span class="pl-pds">"</span>page<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>rowsPerPage<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>pageOffset<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>
+}
+}</pre></div>
+
+<p>Response:</p>
+
+<pre><code>{
+  "results": [
+      {
+          "objectNotion": "question",
+          "questionText": "What is 6190 + 9800?",
+          "answer": {
+              "objectNotion": "answer",
+              "responseText": "15990",
+              "questionID": "2307",
+              "id": "8005"
+          },
+          "wordCount": 7,
+          "distractors": [
+              {
+                  "objectNotion": "answer",
+                  "responseText": "8456",
+                  "questionID": "2307",
+                  "id": "8006"
+              }
+          ],
+          "id": "2307"
+      },
+      {
+          "objectNotion": "question",
+          "questionText": "What is 7696 * 896?",
+          "answer": {
+              "objectNotion": "answer",
+              "responseText": "6895616",
+              "questionID": "2316",
+              "id": "8037"
+          },
+          "wordCount": 7,
+          "distractors": [
+              {
+                  "objectNotion": "answer",
+                  "responseText": "3590",
+                  "questionID": "2316",
+                  "id": "8038"
+              }
+          ],
+          "id": "2316"
+      }
+  ],
+  "errorMessage": null,
+  "objectNotion": "questionResponse",
+  "success": true,
+  "rowCount": 2,
+  "id": "29863210-472b-45c8-a6d8-47b1e2ba3c3e"
+}
+</code></pre>
+
+<p><a id="Query-for-All-Questions"></a></p>
+
+<h3>
+<a id="query-for-all-questions" class="anchor" href="#query-for-all-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Query for All Questions</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>http://localhost:8080/api/question/query</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>Content-Type: application/json</td>
+</tr>
+</tbody>
+</table>
+
+<p>Body:</p>
+
+<div class="highlight highlight-JSON"><pre>{ }</pre></div>
+
+<p>Response:</p>
+
+<pre><code>[A JSON collection of all questions is returned.]
+</code></pre>
+
+<p><a id="Insert-a-Question"></a></p>
+
+<h3>
+<a id="insert-a-question" class="anchor" href="#insert-a-question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Insert a Question</h3>
+
+<p>Url|http://localhost:8080/api/question/insert
+Method|POST
+Headers|Content-Type: application/json
+Body:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+<span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Who was the first person to land on the moon?<span class="pl-pds">"</span></span>,
+<span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Alan Shepard<span class="pl-pds">"</span></span>
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>John Glenn<span class="pl-pds">"</span></span>
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Buzz Aldrin<span class="pl-pds">"</span></span>
+  }
+],
+<span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Neil Armstrong<span class="pl-pds">"</span></span>
+}
+}</pre></div>
+
+<p>Response:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>results<span class="pl-pds">"</span></span>: [
+      {
+          <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>question<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Who was the first person to land on the moon?<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+              <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Neil Armstrong<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13965<span class="pl-pds">"</span></span>
+          },
+          <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>: <span class="pl-c1">18</span>,
+          <span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Alan Shepard<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13966<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>John Glenn<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13967<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Buzz Aldrin<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13968<span class="pl-pds">"</span></span>
+              }
+          ],
+          <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>
+      }
+  ],
+  <span class="pl-s"><span class="pl-pds">"</span>errorMessage<span class="pl-pds">"</span></span>: <span class="pl-c1">null</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>questionResponse<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>success<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>rowCount<span class="pl-pds">"</span></span>: <span class="pl-c1">1</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2d0e0d30-59ff-409e-a523-161918d4adf0<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p>Note the id of 4000 for the new question is returned above.  In addition, a unique id of the response for       tracking and logging purposes is also returned.</p>
+
+<p><a id="Update-a-Question"></a></p>
+
+<h3>
+<a id="update-a-question" class="anchor" href="#update-a-question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update a Question</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>http://localhost:8080/api/question/update</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>Content-Type: application/json</td>
+</tr>
+</tbody>
+</table>
+
+<p>Body:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+<span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+<span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Who was the first person to land on the moon?<span class="pl-pds">"</span></span>,
+<span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Michael Collins<span class="pl-pds">"</span></span>
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>John Glenn<span class="pl-pds">"</span></span>
+  },
+  {
+    <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Buzz Aldrin<span class="pl-pds">"</span></span>
+  }
+],
+<span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Neil Armstrong<span class="pl-pds">"</span></span>
+}
+}</pre></div>
+
+<p>Note that the id (4000) of the question (but not answers or distractors) is required in the update above.</p>
+
+<p>Response:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>results<span class="pl-pds">"</span></span>: [
+      {
+          <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>question<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>questionText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Who was the first person to land on the moon?<span class="pl-pds">"</span></span>,
+          <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>: {
+              <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Neil Armstrong<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+              <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13969<span class="pl-pds">"</span></span>
+          },
+          <span class="pl-s"><span class="pl-pds">"</span>wordCount<span class="pl-pds">"</span></span>: <span class="pl-c1">18</span>,
+          <span class="pl-s"><span class="pl-pds">"</span>distractors<span class="pl-pds">"</span></span>: [
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Michael Collins<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13970<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>John Glenn<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13971<span class="pl-pds">"</span></span>
+              },
+              {
+                  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>answer<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>responseText<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Buzz Aldrin<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>questionID<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>,
+                  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>13972<span class="pl-pds">"</span></span>
+              }
+          ],
+          <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>4000<span class="pl-pds">"</span></span>
+      }
+  ],
+  <span class="pl-s"><span class="pl-pds">"</span>errorMessage<span class="pl-pds">"</span></span>: <span class="pl-c1">null</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>questionResponse<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>success<span class="pl-pds">"</span></span>: <span class="pl-c1">true</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>rowCount<span class="pl-pds">"</span></span>: <span class="pl-c1">1</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>ccd9e546-061b-4ebf-bd44-fb6176f3f539<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p><a id="Erroneous-Update"></a></p>
+
+<h3>
+<a id="erroneous-update" class="anchor" href="#erroneous-update" aria-hidden="true"><span class="octicon octicon-link"></span></a>Erroneous Update</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Url</td>
+<td>http://localhost:8080/api/question/update</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>Headers</td>
+<td>Content-Type: application/json</td>
+</tr>
+</tbody>
+</table>
+
+<p>Body:</p>
+
+<pre><code>{
+"questionText": "Who was the first person to land on the moon?",
+"distractors": [
+  {
+    "responseText": "Michael Collins"
+  },
+  {
+    "responseText": "John Glenn"
+  },
+  {
+    "responseText": "Buzz Aldrin"
+  }
+],
+"answer": {
+  "responseText": "Neil Armstrong"
+}
+}
+</code></pre>
+
+<p>(Above request is missing id.)</p>
+
+<p>Response:</p>
+
+<div class="highlight highlight-JSON"><pre>{
+  <span class="pl-s"><span class="pl-pds">"</span>results<span class="pl-pds">"</span></span>: [],
+  <span class="pl-s"><span class="pl-pds">"</span>errorMessage<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Must specify a non-trivial value for parameter lookupID.<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>objectNotion<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>questionResponse<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">"</span>success<span class="pl-pds">"</span></span>: <span class="pl-c1">false</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>rowCount<span class="pl-pds">"</span></span>: <span class="pl-c1">0</span>,
+  <span class="pl-s"><span class="pl-pds">"</span>id<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>59446bb0-c8af-4356-9229-0b2c52e042d1<span class="pl-pds">"</span></span>
+}</pre></div>
+
+<p><a id="Things-to-Improve"></a></p>
+
+<h2>
+<a id="things-to-improve" class="anchor" href="#things-to-improve" aria-hidden="true"><span class="octicon octicon-link"></span></a>Things to Improve</h2>
+
+<ul>
+<li>Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec.  Add better error messages in responses for these cases.</li>
+<li>Return an indication of whether the specified page is the last one containing data</li>
+<li>Add more business rules to enforce data integrity, such as required values and uniqueness constraints</li>
+<li>Add more ways to filter</li>
+<li>Add more ways to sort</li>
+<li>Add more query tests</li>
+<li>Create indexes for supported search keys and key words</li>
+<li>Synchronize access to table data</li>
+<li>Move QuestionTable cache to a real database</li>
+<li>For distractor updates, support merging of existing items with new items by id</li>
+<li>Handle quoted separators in CSV parser</li>
+<li>Test Question table and business objects more directly</li>
+<li>Use generics to convert between server objects and DTOs</li>
+<li>Add class hierarchy to support logging plugins.</li>
+</ul>
+
+<p><a id="Further-Documentation"></a></p>
+
+<h2>
+<a id="further-documentation" class="anchor" href="#further-documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further Documentation</h2>
+
+<p>Descriptions of objects and properties can be found by looking at the source code classes found here</p>
+
+<p><a href="https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api">https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api</a></p>
+
+<p>The Java classes and their properties are marked with @ApiModel and @ApiModelProperty annotations containing notes about each element.  This application produces swagger.json documents based on these annotations.  Once you have the Quiz Service running as specified above, you can explore this documentation in a browser from this link:</p>
+
+<p><a href="http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.json#!/question">http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.json#!/question</a></p>
+
+<p>Please note that the Swagger site above will also allow execution of GET methods.  However, this will not support POST methods because they require the <code>Content-Type: application/json</code> header to be specified.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">quizService maintained by <a href="https://github.com/rmendel05">rmendel05</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
