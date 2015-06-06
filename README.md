@@ -32,6 +32,8 @@ Endpoint definition: https://github.com/rmendel05/quizService/blob/master/quizSe
 
 API Data Transfer Objects (DTOs): https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api
 
+In addition, unit tests can be found in the following location: https://github.com/rmendel05/quizService/tree/master/quizServer/src/test/java/com/rmendel
+
 ##Testing the Service  
 To test the service, you can use a tool such as Postman, a Google Chrome browser plugin.  Here are some examples of calls to the methods:
 
