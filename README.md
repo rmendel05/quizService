@@ -445,3 +445,13 @@ Response:
 }
 ```
 
+##Further Documentation
+Descriptions of objects and properties can be found by looking at the source code classes found here
+
+https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api
+
+The Java classes and their properties are marked with @ApiModel and @ApiModelProperty annotations containing notes about each element.  This application produces swagger.json documents based on these annotations.  Once you have the Quiz Service running as specified above, you can explore this documentation in a browser from this link:
+
+http://petstore.swagger.io/?url=http%3A%2F%2Flocalhost%3A8080%2Fapi%2Fswagger.json#!/question
+
+Please note that the Swagger site above will also allow execution of GET methods.  However, this will not support POST methods because they require the ```Content-Type: application/json``` header to be specified.
