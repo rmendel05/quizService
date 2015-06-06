@@ -15,7 +15,8 @@
 + [Things to Improve](#Things-to-Improve)
 + [Further Documentation](#Further-Documentation)
 
-##Installation <a id="Installation"></a>
+<a id="Installation"></a>
+##Installation
 
 To install the service, download and place the contents of the following target folder to an empty folder on your local machine.  
 
