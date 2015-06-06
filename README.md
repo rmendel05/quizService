@@ -42,7 +42,8 @@ http://localhost:8080/api/question/getObject/1
 
 Please see the section on Further Documentation below for a convenient way to explore the API using Swagger.
 
-##Codebase <a id="Codebase"></a>
+<a id="Codebase"></a>
+##Codebase
 When reviewing the code, it might help to look at the following areas first:
 
 Endpoint definition: https://github.com/rmendel05/quizService/blob/master/quizServer/src/main/java/com/rmendel/quizManager/service/QuestionService.java
@@ -51,10 +52,12 @@ API Data Transfer Objects (DTOs): https://github.com/rmendel05/quizService/tree/
 
 In addition, unit tests can be found in the following location: https://github.com/rmendel05/quizService/tree/master/quizServer/src/test/java/com/rmendel
 
-##Testing the Service <a id="Testing-the-Service"></a> 
+<a id="Testing-the-Service"></a> 
+##Testing the Service
 To test the service, you can use a tool such as Postman, a Google Chrome browser plugin.  Here are some examples of calls to the methods:
 
-###Lookup a Single Question by Internal ID <a id="Lookup-a-Single-Question-by-Internal-ID"></a>
+<a id="Lookup-a-Single-Question-by-Internal-ID"></a>
+###Lookup a Single Question by Internal ID 
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/getObject/25
@@ -99,7 +102,8 @@ Response:
 }
 ```
 
-###Query by Distractor Count <a id="Query-by-Distractor-Count"></a>
+<a id="Query-by-Distractor-Count"></a>
+###Query by Distractor Count 
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
@@ -189,7 +193,8 @@ Response:
 }
 ```
 
-###Query by Word Count <a id="Query-by-Word-Count"></a>
+<a id="Query-by-Word-Count"></a>
+###Query by Word Count 
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
@@ -266,7 +271,8 @@ Response:
 }
 ```
 
-###Query for All Questions <a id="Query-for-All-Questions"></a>
+<a id="Query-for-All-Questions"></a>
+###Query for All Questions 
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/query
@@ -282,7 +288,8 @@ Response:
 [A JSON collection of all questions is returned.]
 ```
 
-###Insert a Question <a id="Insert-a-Question"></a>
+<a id="Insert-a-Question"></a>
+###Insert a Question 
 Url|http://localhost:8080/api/question/insert
 Method|POST
 Headers|Content-Type: application/json
@@ -352,7 +359,8 @@ Response:
 ```
 Note the id of 4000 for the new question is returned above.  In addition, a unique id of the response for       tracking and logging purposes is also returned.
 
-###Update a Question <a id="Update-a-Question"></a>
+<a id="Update-a-Question"></a>
+###Update a Question 
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/update
@@ -426,7 +434,8 @@ Response:
 }
 ```
 
-###Erroneous Update <a id="Erroneous-Update"></a>
+<a id="Erroneous-Update"></a>
+###Erroneous Update 
           |                                                                   |
 ----------|-------------------------------------------------------------------
 Url|http://localhost:8080/api/question/update
@@ -466,7 +475,8 @@ Response:
 }
 ```
 
-##Things to Improve <a id="Things-to-Improve"></a>
+<a id="Things-to-Improve"></a>
+##Things to Improve 
 * Handle when incoming JSON objects are formatted incorrectly, such as missing comma from array spec.  Add better error messages in responses for these cases.
 * Return an indication of whether the specified page is the last one containing data
 * Add more business rules to enforce data integrity, such as required values and uniqueness constraints
@@ -482,7 +492,8 @@ Response:
 * Use generics to convert between server objects and DTOs
 * Add class hierarchy to support logging plugins.
 
-##Further Documentation <a id="Further-Documentation"></a>
+<a id="Further-Documentation"></a>
+##Further Documentation 
 Descriptions of objects and properties can be found by looking at the source code classes found here
 
 https://github.com/rmendel05/quizService/tree/master/quizServer/src/main/java/com/rmendel/quizManager/api
