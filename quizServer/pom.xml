@@ -44,21 +44,15 @@
       <artifactId>jetty-servlet</artifactId>
       <version>${jettyVersion}</version>
     </dependency>
-<!-- 	<dependency> -->
-<!-- 		<groupId>com.sun.jersey</groupId> -->
-<!-- 		<artifactId>jersey-bundle</artifactId> -->
-<!-- 		<version>1.8</version> -->
-<!-- 	</dependency> -->
-<!-- 	<dependency> -->
-<!-- 	  <groupId>com.sun.jersey</groupId> -->
-<!-- 	  <artifactId>jersey-core</artifactId> -->
-<!-- 	  <version>1.8</version> -->
-<!-- 	</dependency> -->
 	<dependency>
 		<groupId>com.wordnik</groupId>
 		<artifactId>swagger-jersey-jaxrs</artifactId>
-<!-- 		<artifactId>swagger-jaxrs</artifactId> -->
   		<version>1.5.2-M2</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-nop</artifactId>
+  		<version>1.7.12</version>
 	</dependency>
    </dependencies>
   <build>

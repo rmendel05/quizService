@@ -245,9 +245,9 @@ public final class QuestionTable {
 			return new ArrayList<QuestionData>();
 		}
 		
-		int endOffset;
+		int upperBound;
 		try {
-			endOffset = Math.min(startOffset + page.getRowsPerPage() - 1, questions.size() - 1);		
+			upperBound = Math.min(startOffset + page.getRowsPerPage(), questions.size());		
 		} catch(Exception e) {
 			Exception startOffsetException = new Exception(
 					"Unable to calculate ending row offset for pageOffset [" + page.getPageOffset() + "] and rowsPerPage [" + page.getRowsPerPage() + "].", 
@@ -256,7 +256,7 @@ public final class QuestionTable {
 			throw startOffsetException;
 		}
 		
-		return new ArrayList<QuestionData>(questions.subList(startOffset, endOffset));
+		return new ArrayList<QuestionData>(questions.subList(startOffset, upperBound));
 	}
 
 	public void putRow(QuestionData toAdd) {

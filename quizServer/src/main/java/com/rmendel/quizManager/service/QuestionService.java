@@ -49,14 +49,15 @@ public final class QuestionService {
 		 }
 	 }
 
-	 // TODO Document filter types for QuestionDto queries: keyWords
-	 // TODO Document sort elements for QuestionDto queries: id, questionText, wordCount, distractorCount
+	 // TODO Document filter types for QuestionDto queries: wordCount
+	 // TODO Document sort elements for QuestionDto queries: wordCount, distractorCount
 	 @POST
 	 @Path("/query")
 	 @ApiOperation(value = "Returns multiple questions based on the specified query",
 	    response = QuestionResponseDto.class)	 
 	 @ApiImplicitParams(
 		{@ApiImplicitParam(name = "query", value = "Specifies filter, sort and page for return list of questions", required = true, dataType = "QuerySpecDto", paramType = "body")})
+	 @Consumes(MediaType.APPLICATION_JSON)
 	 @Produces(MediaType.APPLICATION_JSON)
 	 public QuestionResponseDto query(QuerySpecDto query) {
 		 
